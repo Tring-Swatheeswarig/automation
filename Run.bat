@@ -1,0 +1,1 @@
+ pytest testCases/LoginPage/test_sanity.py::TestTrEOId0101::test_tr_jw__sign__tc_41
