@@ -14869,49 +14869,355 @@ class TestTrEOId0101:
         )
         el9.click()
 
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Meeting")
+    @allure.description_html("""
+        <h2>Recording</h2>
 
+        <h2>Verify that tapping the more action 3-dot icon in an ongoing meeting displays the "Record" icon.</h2>
 
+        <br>
 
+        <u>Test Case Description</u>
+        &nbsp;&nbsp;-&nbsp;&nbsp;
+        Check whether tapping the "more actions" (3-dot) icon in an ongoing meeting displays the "Record" icon.
 
+        <br><br><br>
 
+        <u>Expected Result</u>
 
+        <br><br>
 
+        User should be able to see that the "Record" icon is displayed when the host clicks the "more actions" (3-dot) icon in an ongoing meeting.
 
+        <br><br><br>
 
+        Client
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Katon Meet
 
+        <br><br>
 
+        Project
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Katon Meet
 
+        <br><br>
+    """)
+    def test_GM_120__Meeting_Recording_147(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
 
+        el1 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el1.send_keys("sathees")
 
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el2.send_keys("test@1234")
 
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                )
+            )
+        )
+        el3.click()
 
+        el4 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(62)'
+                )
+            )
+        )
+        el4.click()
 
+        el5 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(3)'
+                )
+            )
+        )
+        el5.click()
 
+        el6 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(31)'
+                )
+            )
+        )
+        el6.click()
 
+        el7 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(19)'
+                )
+            )
+        )
+        el7.click()
 
+        el8 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(5)'
+                )
+            )
+        )
+        el8.click()
 
+        el9 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().text("Continue")'
+                )
+            )
+        )
+        el9.click()
 
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Meeting")
+    @allure.description_html("""
+        <h2>Switch Day to Week View</h2>
 
+        <h2>Check whether the user can switch from day view to week view in My Meeting.</h2>
 
+        <br>
 
+        <u>Test Case Description</u>
+        &nbsp;&nbsp;-&nbsp;&nbsp;
+        Check whether switching from day view to week view changes the calendar to week view.
 
+        <br><br><br>
 
+        <u>Expected Result</u>
 
+        <br><br>
 
+        User should be able to switch from day view to week view, and the calendar should be displayed in week view.
 
+        <br><br><br>
 
+        Client
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Katon Meet
 
+        <br><br>
 
+        Project
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Katon Meet
 
+        <br><br>
+    """)
+    def test_GM_2415__Home_My_Meeting_Switch_Day_to_Week_View_754(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
 
+        el1 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el1.send_keys("sathees")
 
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el2.send_keys("test@1234")
 
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                )
+            )
+        )
+        el3.click()
 
+        el4 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(85)'
+                )
+            )
+        )
+        el4.click()
 
+        el5 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(22)'
+                )
+            )
+        )
+        el5.click()
 
+        el6 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(33)'
+                )
+            )
+        )
+        el6.click()
 
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Meeting")
+    @allure.description_html("""
+        <h2>Switch Week to Day View</h2>
 
+        <h2>Check whether the user can switch from week view to day view in My Meeting.</h2>
 
+        <br>
+
+        <u>Test Case Description</u>
+        &nbsp;&nbsp;-&nbsp;&nbsp;
+        Check whether switching from week view to day view changes the calendar to day view.
+
+        <br><br><br>
+
+        <u>Expected Result</u>
+
+        <br><br>
+
+        User should be able to switch from week view to day view, and the calendar should be displayed in day view.
+
+        <br><br><br>
+
+        Client
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Katon Meet
+
+        <br><br>
+
+        Project
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Katon Meet
+
+        <br><br>
+    """)
+    def test_GM_2415__Home_My_Meeting_Switch_Week_to_Day_View_755(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
+
+        el1 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el1.send_keys("sathees")
+
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el2.send_keys("test@1234")
+
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                )
+            )
+        )
+        el3.click()
+
+        el4 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(85)'
+                )
+            )
+        )
+        el4.click()
+
+        el5 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(22)'
+                )
+            )
+        )
+        el5.click()
+
+        el6 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(33)'
+                )
+            )
+        )
+        el6.click()
+
+        el7 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().text("Week")'
+                )
+            )
+        )
+        el7.click()
+
+        el8 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.XPATH,
+                    "//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[3]/android.view.View[5]/android.view.View[8]"
+                )
+            )
+        )
+        el8.click()
 
 
 
