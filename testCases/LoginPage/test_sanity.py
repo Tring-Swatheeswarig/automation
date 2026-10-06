@@ -11811,3 +11811,3107 @@ class TestTrEOId0101:
             )
         )
         el9.click()
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Meeting")
+    @allure.description_html("""
+                                                                               <h2>Verify that the user is able to successfully schedule a meeting with valid inputs.
+                                                                               <br>
+
+                                                                               <u>Test Case Description</u>
+                                                                               &nbsp;&nbsp;-&nbsp;&nbsp;
+                                                                          Check whether the user is able to successfully schedule a meeting with valid inputs.
+                                                   . 
+                                                                               <br><br><br>
+
+                                                                               <u>Expected Result</u>
+
+                                                                               <br><br>
+
+                                                                          The meeting should be scheduled successfully, and a confirmation message should be displayed.
+                                                                               <br><br><br>
+
+                                                                               Client
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+
+                                                                               Project
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+                                                                               """)
+    def test_GM_699__Meeting_Schedule_272(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
+
+        el1 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el1.send_keys("sathees")
+
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el2.send_keys("test@1234")
+
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(7)'
+                )
+            )
+        )
+        el3.click()
+
+        el4 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(78)'
+                )
+            )
+        )
+        el4.click()
+
+        el5 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().text("Schedule Meeting")'
+                )
+            )
+        )
+        el5.click()
+
+        el7 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el7.send_keys("test")
+
+        el8 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(30)'
+                )
+            )
+        )
+        el8.click()
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Meeting")
+    @allure.description_html("""
+                                                                           <h2>Verify that the system shows an error message when trying to schedule a meeting without a title.
+                                                                           <br>
+
+                                                                           <u>Test Case Description</u>
+                                                                           &nbsp;&nbsp;-&nbsp;&nbsp;
+                                                                      Check whether the system displays an error message when the user tries to schedule a meeting without entering a title.
+                                               . 
+                                                                           <br><br><br>
+
+                                                                           <u>Expected Result</u>
+
+                                                                           <br><br>
+
+                                                                     The system should display an error message such as “Meeting title is required”, and the meeting should not be scheduled.
+                                                                           <br><br><br>
+
+                                                                           Client
+                                                                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                           Katon Meet
+
+                                                                           <br><br>
+
+                                                                           Project
+                                                                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                           Katon Meet
+
+                                                                           <br><br>
+                                                                           """)
+    def test_GM_699__Meeting_Schedule_273(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
+
+        el1 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el1.send_keys("sathees")
+
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el2.send_keys("test@1234")
+
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(7)'
+                )
+            )
+        )
+        el3.click()
+
+        el4 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(80)'
+                )
+            )
+        )
+        el4.click()
+
+        el5 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(7)'
+                )
+            )
+        )
+        el5.click()
+
+        el6 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().text("Schedule Meeting").instance(1)'
+                )
+            )
+        )
+        el6.click()
+
+        el7 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().text("Title is required")'
+                )
+            )
+        )
+        el7.click()
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Signin")
+    @allure.description_html("""
+                                                                               <h2>Verify that the Login using valid email and password.
+                                                                               <br>
+
+                                                                               <u>Test Case Description</u>
+                                                                               &nbsp;&nbsp;-&nbsp;&nbsp;
+                                                                          Verify user can log in using registered email address.
+                                                   . 
+                                                                               <br><br><br>
+
+                                                                               <u>Expected Result</u>
+
+                                                                               <br><br>
+
+                                                                         User is logged in successfully
+                                                                               <br><br><br>
+
+                                                                               Client
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+
+                                                                               Project
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+                                                                               """)
+    def test_GM_1759__Authentication_Login_547(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
+
+        el1 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el1.send_keys("sathees")
+
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el2.send_keys("test@1234")
+
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(7)'
+                )
+            )
+        )
+        el3.click()
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Localization")
+    @allure.description_html("""
+                                                                               <h2>Verify app detects French device language automatically
+                                                                               <br>
+
+                                                                               <u>Test Case Description</u>
+                                                                               &nbsp;&nbsp;-&nbsp;&nbsp;
+                                                                          Verify application loads in French when device language is French
+                                                   . 
+                                                                               <br><br><br>
+
+                                                                               <u>Expected Result</u>
+
+                                                                               <br><br>
+
+                                                                        App should automatically load in French language
+                                                                               <br><br><br>
+
+                                                                               Client
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+
+                                                                               Project
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+                                                                               """)
+    def test_GM_1932_GM_1933__Localization_i18_Automatic_Detection_French_707(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
+
+        el1 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el1.send_keys("sathees")
+
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el2.send_keys("test@1234")
+
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(7)'
+                )
+            )
+        )
+        el3.click()
+
+        el4 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(13)'
+                )
+            )
+        )
+        el4.click()
+
+        el5 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(17)'
+                )
+            )
+        )
+        el5.click()
+
+        el6 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(12)'
+                )
+            )
+        )
+        el6.click()
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Localization")
+    @allure.description_html("""
+                                                                                   <h2>Verify app detects German device language automatically
+                                                                                   <br>
+
+                                                                                   <u>Test Case Description</u>
+                                                                                   &nbsp;&nbsp;-&nbsp;&nbsp;
+                                                                              Verify application loads in German when device language is German
+                                                       . 
+                                                                                   <br><br><br>
+
+                                                                                   <u>Expected Result</u>
+
+                                                                                   <br><br>
+
+                                                                            App should automatically load in German language
+                                                                                   <br><br><br>
+
+                                                                                   Client
+                                                                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                                   Katon Meet
+
+                                                                                   <br><br>
+
+                                                                                   Project
+                                                                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                                   Katon Meet
+
+                                                                                   <br><br>
+                                                                                   """)
+    def test_GM_1932_GM_1933__Localization_i18_Automatic_Detection_German_708(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
+
+        el1 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el1.send_keys("sathees")
+
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el2.send_keys("test@1234")
+
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(7)'
+                )
+            )
+        )
+        el3.click()
+
+        el4 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(13)'
+                )
+            )
+        )
+        el4.click()
+
+        el5 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(17)'
+                )
+            )
+        )
+        el5.click()
+
+        el6 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(13)'
+                )
+            )
+        )
+        el6.click()
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Localization")
+    @allure.description_html("""
+                                                                               <h2>Verify app detects Dutch device language automatically.
+                                                                               <br>
+
+                                                                               <u>Test Case Description</u>
+                                                                               &nbsp;&nbsp;-&nbsp;&nbsp;
+                                                                         Verify application loads in Dutch when device language is Dutch
+                                                   . 
+                                                                               <br><br><br>
+
+                                                                               <u>Expected Result</u>
+
+                                                                               <br><br>
+
+                                                                         App should automatically load in Dutch language
+                                                                               <br><br><br>
+
+                                                                               Client
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+
+                                                                               Project
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+                                                                               """)
+    def test_GM_1932_GM_1933__Localization_i18_Automatic_Detection_Dutch_709(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
+
+        el1 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el1.send_keys("sathees")
+
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el2.send_keys("test@1234")
+
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(7)'
+                )
+            )
+        )
+        el3.click()
+
+        el4 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(13)'
+                )
+            )
+        )
+        el4.click()
+
+        el5 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(17)'
+                )
+            )
+        )
+        el5.click()
+
+        el6 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                )
+            )
+        )
+        el6.click()
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Localization")
+    @allure.description_html("""
+                                                                               <h2>Verify app detects Swedish device language automatically
+                                                                               <br>
+
+                                                                               <u>Test Case Description</u>
+                                                                               &nbsp;&nbsp;-&nbsp;&nbsp;
+                                                                          Verify application loads in Swedish when device language is Swedish
+                                                   . 
+                                                                               <br><br><br>
+
+                                                                               <u>Expected Result</u>
+
+                                                                               <br><br>
+
+                                                                         App should automatically load in Swedish language
+                                                                               <br><br><br>
+
+                                                                               Client
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+
+                                                                               Project
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+                                                                               """)
+    def test_GM_1932_GM_1933__Localization_i18_Automatic_Detection_Swedish_710(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
+
+        el1 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el1.send_keys("sathees")
+
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el2.send_keys("test@1234")
+
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(7)'
+                )
+            )
+        )
+        el3.click()
+
+        el4 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(13)'
+                )
+            )
+        )
+        el4.click()
+
+        el5 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(17)'
+                )
+            )
+        )
+        el5.click()
+
+        el6 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(14)'
+                )
+            )
+        )
+        el6.click()
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Localization")
+    @allure.description_html("""
+                                                                               <h2>Verify application defaults to English when device language unsupported
+                                                                               <br>
+
+                                                                               <u>Test Case Description</u>
+                                                                               &nbsp;&nbsp;-&nbsp;&nbsp;
+                                                                          Verify fallback language behavior
+                                                   . 
+                                                                               <br><br><br>
+
+                                                                               <u>Expected Result</u>
+
+                                                                               <br><br>
+
+                                                                         Application should load in English language
+                                                                               <br><br><br>
+
+                                                                               Client
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+
+                                                                               Project
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+                                                                               """)
+    def test_GM_1932_GM_1933__Localization_i18_Fallback_To_English_711(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
+
+        el1 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el1.send_keys("sathees")
+
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el2.send_keys("test@1234")
+
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(7)'
+                )
+            )
+        )
+        el3.click()
+
+        el4 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(13)'
+                )
+            )
+        )
+        el4.click()
+
+        el5 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(17)'
+                )
+            )
+        )
+        el5.click()
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Signin")
+    @allure.description_html("""
+                                                                               <h2>Verify user lands on Home screen after login
+                                                                               <br>
+
+                                                                               <u>Test Case Description</u>
+                                                                               &nbsp;&nbsp;-&nbsp;&nbsp;
+                                                                          Verify user is redirected to Home screen after successful login 
+                                                                               <br><br><br>
+
+                                                                               <u>Expected Result</u>
+
+                                                                               <br><br>
+
+                                                                         User is navigated to Home screen
+                                                                               <br><br><br>
+
+                                                                               Client
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+
+                                                                               Project
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+                                                                               """)
+    def test_GM_2410_GM_2437__Tab_Bar_Navigation_Post_Login_Landing_734(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
+
+        el1 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el1.send_keys("sathees")
+
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el2.send_keys("test@1234")
+
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(7)'
+                )
+            )
+        )
+        el3.click()
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Signin")
+    @allure.description_html("""
+                                                                               <h2>Verify that the Login using valid email and password.
+                                                                               <br>
+
+                                                                               <u>Test Case Description</u>
+                                                                               &nbsp;&nbsp;-&nbsp;&nbsp;
+                                                                          Verify user can log in using registered email address.
+                                                   . 
+                                                                               <br><br><br>
+
+                                                                               <u>Expected Result</u>
+
+                                                                               <br><br>
+
+                                                                         User is logged in successfully
+                                                                               <br><br><br>
+
+                                                                               Client
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+
+                                                                               Project
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+                                                                               """)
+    def test_GM_2410_GM_2437__Tab_Bar_Navigation_Home_Navigation_738(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
+
+        el1 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el1.send_keys("sathees")
+
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el2.send_keys("test@1234")
+
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(7)'
+                )
+            )
+        )
+        el3.click()
+
+        el4 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(90)'
+                )
+            )
+        )
+        el4.click()
+
+        el5 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(95)'
+                )
+            )
+        )
+        el5.click()
+
+        el6 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(15)'
+                )
+            )
+        )
+        el6.click()
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Home")
+    @allure.description_html("""
+                                                                               <h2>Verify navigation to Contacts tab
+                                                                               <br>
+
+                                                                               <u>Test Case Description</u>
+                                                                               &nbsp;&nbsp;-&nbsp;&nbsp;
+                                                                          Verify tapping Contacts navigates to Contacts screen
+                                                   . 
+                                                                               <br><br><br>
+
+                                                                               <u>Expected Result</u>
+
+                                                                               <br><br>
+
+                                                                         User navigates to Contacts screen
+                                                                               <br><br><br>
+
+                                                                               Client
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+
+                                                                               Project
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+                                                                               """)
+    def test_GM_2410_GM_2437__Tab_Bar_Navigation_Contacts_Navigation_739(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
+
+        el1 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el1.send_keys("sathees")
+
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el2.send_keys("test@1234")
+
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(7)'
+                )
+            )
+        )
+        el3.click()
+
+        el4 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(90)'
+                )
+            )
+        )
+        el4.click()
+
+        el5 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(95)'
+                )
+            )
+        )
+        el5.click()
+
+        el6 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(15)'
+                )
+            )
+        )
+        el6.click()
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Home")
+    @allure.description_html("""
+                                                                               <h2>Verify tapping + opens action menu
+                                                                               <br>
+
+                                                                               <u>Test Case Description</u>
+                                                                               &nbsp;&nbsp;-&nbsp;&nbsp;
+                                                                          Verify + icon opens quick action menu instead of navigation.
+                                                   . 
+                                                                               <br><br><br>
+
+                                                                               <u>Expected Result</u>
+
+                                                                               <br><br>
+
+                                                                         Action menu overlay appears
+                                                                               <br><br><br>
+
+                                                                               Client
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+
+                                                                               Project
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+                                                                               """)
+    def test_GM_2410_GM_2437__Tab_Bar_Navigation_Plus_Icon_Action_Trigger_744(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
+
+        el1 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el1.send_keys("sathees")
+
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el2.send_keys("test@1234")
+
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(7)'
+                )
+            )
+        )
+        el3.click()
+
+        el4 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(81)'
+                )
+            )
+        )
+        el4.click()
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Home")
+    @allure.description_html("""
+                                                                               <h2>Verify navigation to Calendar tab.
+                                                                               <br>
+
+                                                                               <u>Test Case Description</u>
+                                                                               &nbsp;&nbsp;-&nbsp;&nbsp;
+                                                                          Verify tapping Calendar navigates to Calendar screen
+                                                   . 
+                                                                               <br><br><br>
+
+                                                                               <u>Expected Result</u>
+
+                                                                               <br><br>
+
+                                                                         User navigates to Calendar screen
+                                                                               <br><br><br>
+
+                                                                               Client
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+
+                                                                               Project
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+                                                                               """)
+    def test_GM_2410_GM_2437__Tab_Bar_Navigation_Calendar_Navigation_741(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
+
+        el1 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el1.send_keys("sathees")
+
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el2.send_keys("test@1234")
+
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(7)'
+                )
+            )
+        )
+        el3.click()
+
+        el4 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(105)'
+                )
+            )
+        )
+        el4.click()
+
+        el5 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(15)'
+                )
+            )
+        )
+        el5.click()
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Home")
+    @allure.description_html("""
+                                                                               <h2>Verify navigation to Recordings tab
+                                                                               <br>
+
+                                                                               <u>Test Case Description</u>
+                                                                               &nbsp;&nbsp;-&nbsp;&nbsp;
+                                                                          Verify tapping Recordings navigates to Recordings screen
+                                                   . 
+                                                                               <br><br><br>
+
+                                                                               <u>Expected Result</u>
+
+                                                                               <br><br>
+
+                                                                        User navigates to Recordings screen
+                                                                               <br><br><br>
+
+                                                                               Client
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+
+                                                                               Project
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+                                                                               """)
+    def test_GM_2410_GM_2437__Tab_Bar_Navigation_Recordings_Navigation_740(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
+
+        el1 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el1.send_keys("sathees")
+
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el2.send_keys("test@1234")
+
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(7)'
+                )
+            )
+        )
+        el3.click()
+
+        el4 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(13)'
+                )
+            )
+        )
+        el4.click()
+
+        el5 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                )
+            )
+        )
+        el5.click()
+
+        el6 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(3)'
+                )
+            )
+        )
+        el6.click()
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Meeting")
+    @allure.description_html("""
+                                                                               <h2>Verify navigation to Instant Meeting
+                                                                               <br>
+
+                                                                               <u>Test Case Description</u>
+                                                                               &nbsp;&nbsp;-&nbsp;&nbsp;
+                                                                          Verify user is redirected to instant meeting on selecting option
+                                                   . 
+                                                                               <br><br><br>
+
+                                                                               <u>Expected Result</u>
+
+                                                                               <br><br>
+
+                                                                         User is redirected to Instant Meeting screen
+                                                                               <br><br><br>
+
+                                                                               Client
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+
+                                                                               Project
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+                                                                               """)
+    def test_GM_2412_GM_2439__Home_FAB_Instant_Meeting_Navigation_796(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
+
+        el1 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el1.send_keys("sathees")
+
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el2.send_keys("test@1234")
+
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(7)'
+                )
+            )
+        )
+        el3.click()
+
+        el4 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(81)'
+                )
+            )
+        )
+        el4.click()
+
+        el5 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(4)'
+                )
+            )
+        )
+        el5.click()
+
+        el6 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ID,
+                    "com.android.permissioncontroller:id/permission_allow_foreground_only_button"
+                )
+            )
+        )
+        el6.click()
+
+        el7 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ID,
+                    "com.android.permissioncontroller:id/permission_allow_foreground_only_button"
+                )
+            )
+        )
+        el7.click()
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Meeting")
+    @allure.description_html("""
+                                                                               <h2>Verify navigation to Schedule Meeting page
+                                                                               <br>
+
+                                                                               <u>Test Case Description</u>
+                                                                               &nbsp;&nbsp;-&nbsp;&nbsp;
+                                                                         Verify user is redirected to schedule meeting page
+                                                   . 
+                                                                               <br><br><br>
+
+                                                                               <u>Expected Result</u>
+
+                                                                               <br><br>
+
+                                                                         User is redirected to Schedule Meeting creation page
+                                                                               <br><br><br>
+
+                                                                               Client
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+
+                                                                               Project
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+                                                                               """)
+    def test_GM_2412_GM_2439__Home_FAB_Schedule_Meeting_Navigation_797(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
+
+        el1 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el1.send_keys("sathees")
+
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el2.send_keys("test@1234")
+        el2.send_keys("test@1234")
+
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(7)'
+                )
+            )
+        )
+        el3.click()
+
+        el4 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(81)'
+                )
+            )
+        )
+        el4.click()
+
+        el5 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().text("Schedule Meeting")'
+                )
+            )
+        )
+        el5.click()
+
+        el6 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.CLASS_NAME,
+                    "android.widget.ScrollView"
+                )
+            )
+        )
+        el6.click()
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Event")
+    @allure.description_html("""
+                                                                               <h2>Verify navigation to Schedule Event page
+                                                                               <br>
+
+                                                                               <u>Test Case Description</u>
+                                                                               &nbsp;&nbsp;-&nbsp;&nbsp;
+                                                                         Verify user is redirected to schedule event page.
+                                                   . 
+                                                                               <br><br><br>
+
+                                                                               <u>Expected Result</u>
+
+                                                                               <br><br>
+
+                                                                         User is redirected to Schedule Event creation page
+                                                                               <br><br><br>
+
+                                                                               Client
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+
+                                                                               Project
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+                                                                               """)
+    def test_GM_2412_GM_2439__Home_FAB_Schedule_Event_Navigation_798(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
+
+        el1 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el1.send_keys("sathees")
+
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el2.send_keys("test@1234")
+
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(7)'
+                )
+            )
+        )
+        el3.click()
+
+        el4 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(81)'
+                )
+            )
+        )
+        el4.click()
+
+        el5 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(10)'
+                )
+            )
+        )
+        el5.click()
+
+        el6 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.CLASS_NAME,
+                    "android.widget.ScrollView"
+                )
+            )
+        )
+        el6.click()
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Recording")
+    @allure.description_html("""
+                                                                               <h2>Verify tapping recordings icon navigates to recordings page
+                                                                               <br>
+
+                                                                               <u>Test Case Description</u>
+                                                                               &nbsp;&nbsp;-&nbsp;&nbsp;
+                                                                         Verify user is redirected to recordings page on tapping recordings icon
+                                                   . 
+                                                                               <br><br><br>
+
+                                                                               <u>Expected Result</u>
+
+                                                                               <br><br>
+
+                                                                         User is navigated to recordings page
+                                                                               <br><br><br>
+
+                                                                               Client
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+
+                                                                               Project
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+                                                                               """)
+    def test_GM_2419_GM_2445_GM_2421_GM_2447__Recordings_Navigation_to_Recordings_Page_807(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
+
+        el1 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el1.send_keys("sathees")
+
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el2.send_keys("test@1234")
+
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(7)'
+                )
+            )
+        )
+        el3.click()
+
+        el4 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(13)'
+                )
+            )
+        )
+        el4.click()
+
+        el5 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                )
+            )
+        )
+        el5.click()
+
+        el6 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(3)'
+                )
+            )
+        )
+        el6.click()
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Recording")
+    @allure.description_html("""
+                                                                               <h2>Verify All and Bookmarked tabs are visible
+                                                                               <br>
+
+                                                                               <u>Test Case Description</u>
+                                                                               &nbsp;&nbsp;-&nbsp;&nbsp;
+                                                                         Verify All and Bookmarked tabs are present on recordings page.
+                                                   . 
+                                                                               <br><br><br>
+
+                                                                               <u>Expected Result</u>
+
+                                                                               <br><br>
+
+                                                                         Both All and Bookmarked tabs are visible
+                                                                               <br><br><br>
+
+                                                                               Client
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+
+                                                                               Project
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+                                                                               """)
+    def test_GM_2419__Recordings_Tabs_Visibility_808(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
+
+        el1 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el1.send_keys("sathees")
+
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el2.send_keys("test@1234")
+
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(7)'
+                )
+            )
+        )
+        el3.click()
+
+        el4 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(13)'
+                )
+            )
+        )
+        el4.click()
+
+        el5 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                )
+            )
+        )
+        el5.click()
+
+        el6 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(3)'
+                )
+            )
+        )
+        el6.click()
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Recording")
+    @allure.description_html("""
+                                                                               <h2>Verify All tab is selected by default
+                                                                               <br>
+
+                                                                               <u>Test Case Description</u>
+                                                                               &nbsp;&nbsp;-&nbsp;&nbsp;
+                                                                          Verify All tab is selected when recordings page opens
+                                                   . 
+                                                                               <br><br><br>
+
+                                                                               <u>Expected Result</u>
+
+                                                                               <br><br>
+
+                                                                         All tab is selected by default
+                                                                               <br><br><br>
+
+                                                                               Client
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+
+                                                                               Project
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+                                                                               """)
+    def test_GM_2419__Recordings_All_Tab_Default_Selection_809(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
+
+        el1 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el1.send_keys("sathees")
+
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el2.send_keys("test@1234")
+
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(7)'
+                )
+            )
+        )
+        el3.click()
+
+        el4 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(13)'
+                )
+            )
+        )
+        el4.click()
+
+        el5 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                )
+            )
+        )
+        el5.click()
+
+        el6 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(3)'
+                )
+            )
+        )
+        el6.click()
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Recording")
+    @allure.description_html("""
+                                                                               <h2>Verify all recordings are displayed in All tab
+                                                                               <br>
+
+                                                                               <u>Test Case Description</u>
+                                                                               &nbsp;&nbsp;-&nbsp;&nbsp;
+                                                                          Verify both bookmarked and unbookmarked recordings are shown
+                                                   . 
+                                                                               <br><br><br>
+
+                                                                               <u>Expected Result</u>
+
+                                                                               <br><br>
+
+                                                                        All recordings (bookmarked and unbookmarked) are displayed
+                                                                               <br><br><br>
+
+                                                                               Client
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+
+                                                                               Project
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+                                                                               """)
+    def test_GM_2419__Recordings_All_Recordings_Listing_810(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
+
+        el1 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el1.send_keys("sathees")
+
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el2.send_keys("test@1234")
+
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(7)'
+                )
+            )
+        )
+        el3.click()
+
+        el4 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(13)'
+                )
+            )
+        )
+        el4.click()
+
+        el5 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                )
+            )
+        )
+        el5.click()
+
+        el6 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(3)'
+                )
+            )
+        )
+        el6.click()
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Recording")
+    @allure.description_html("""
+                                                                               <h2>Verify user can bookmark a recording
+                                                                               <br>
+
+                                                                               <u>Test Case Description</u>
+                                                                               &nbsp;&nbsp;-&nbsp;&nbsp;
+                                                                          Verify tapping bookmark icon marks the recording
+                                                   . 
+                                                                               <br><br><br>
+
+                                                                               <u>Expected Result</u>
+
+                                                                               <br><br>
+
+                                                                         Recording is marked as bookmarked
+                                                                               <br><br><br>
+
+                                                                               Client
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+
+                                                                               Project
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+                                                                               """)
+    def test_GM_2419__Recordings_Bookmark_Action_812(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
+
+        el1 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el1.send_keys("sathees")
+
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el2.send_keys("test@1234")
+
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(7)'
+                )
+            )
+        )
+        el3.click()
+
+        el4 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(13)'
+                )
+            )
+        )
+        el4.click()
+
+        el5 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                )
+            )
+        )
+        el5.click()
+
+        el6 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(3)'
+                )
+            )
+        )
+        el6.click()
+
+        el7 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(6)'
+                )
+            )
+        )
+        el7.click()
+
+        el8 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(7)'
+                )
+            )
+        )
+        el8.click()
+
+        el9 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().text("All")'
+                )
+            )
+        )
+        el9.click()
+
+        el10 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(12)'
+                )
+            )
+        )
+        el10.click()
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Recording")
+    @allure.description_html("""
+                                                                               <h2>Verify user can unbookmark a recording
+                                                                               <br>
+
+                                                                               <u>Test Case Description</u>
+                                                                               &nbsp;&nbsp;-&nbsp;&nbsp;
+                                                                          Verify tapping bookmark icon again removes bookmark
+                                                   . 
+                                                                               <br><br><br>
+
+                                                                               <u>Expected Result</u>
+
+                                                                               <br><br>
+
+                                                                         Recording is unbookmarked
+                                                                               <br><br><br>
+
+                                                                               Client
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+
+                                                                               Project
+                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                               Katon Meet
+
+                                                                               <br><br>
+                                                                               """)
+    def test_GM_2419__Recordings_Unbookmark_Action_813(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
+
+        el1 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el1.send_keys("sathees")
+
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el2.send_keys("test@1234")
+
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(7)'
+                )
+            )
+        )
+        el3.click()
+
+        el4 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(13)'
+                )
+            )
+        )
+        el4.click()
+
+        el5 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                )
+            )
+        )
+        el5.click()
+
+        el6 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(3)'
+                )
+            )
+        )
+        el6.click()
+
+        el7 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(6)'
+                )
+            )
+        )
+        el7.click()
+
+        el8 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(7)'
+                )
+            )
+        )
+        el8.click()
+
+        el9 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().text("All")'
+                )
+            )
+        )
+        el9.click()
+
+        el10 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(12)'
+                )
+            )
+        )
+        el10.click()
+
+        el11 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(12)'
+                )
+            )
+        )
+        el11.click()
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Announcement")
+    @allure.description_html("""
+                                                                                   <h2>Verify tapping announcement entry opens announcements list.
+                                                                                   <br>
+
+                                                                                   <u>Test Case Description</u>
+                                                                                   &nbsp;&nbsp;-&nbsp;&nbsp;
+                                                                             Check whether announcement entry redirects user to announcements list screen.
+                                                       . 
+                                                                                   <br><br><br>
+
+                                                                                   <u>Expected Result</u>
+
+                                                                                   <br><br>
+
+                                                                             User should navigate successfully to announcements list screen
+                                                                                   <br><br><br>
+
+                                                                                   Client
+                                                                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                                   Katon Meet
+
+                                                                                   <br><br>
+
+                                                                                   Project
+                                                                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                                   Katon Meet
+
+                                                                                   <br><br>
+                                                                                   """)
+    def test_GM_3218__Announcements_Announcement_List_Navigation_1334(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
+
+        el1 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el1.send_keys("sathees")
+
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el2.send_keys("test@1234")
+
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                )
+            )
+        )
+        el3.click()
+
+        el4 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ACCESSIBILITY_ID,
+                    "Announcement"
+                )
+            )
+        )
+        el4.click()
+
+        el5 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(3)'
+                )
+            )
+        )
+        el5.click()
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Announcement")
+    @allure.description_html("""
+                                                                                       <h2>Verify tapping announcement item opens detail screen.
+                                                                                       <br>
+
+                                                                                       <u>Test Case Description</u>
+                                                                                       &nbsp;&nbsp;-&nbsp;&nbsp;
+                                                                                 Check whether tapping announcement redirects user to detail screen successfully.
+                                                           . 
+                                                                                       <br><br><br>
+
+                                                                                       <u>Expected Result</u>
+
+                                                                                       <br><br>
+
+                                                                                 User should navigate successfully to announcement detail screen
+                                                                                       <br><br><br>
+
+                                                                                       Client
+                                                                                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                                       Katon Meet
+
+                                                                                       <br><br>
+
+                                                                                       Project
+                                                                                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                                       Katon Meet
+
+                                                                                       <br><br>
+                                                                                       """)
+    def test_GM_3218__Announcements_Announcement_Detail_Screen_Navigation_1344(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
+
+        el1 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el1.send_keys("sathees")
+
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el2.send_keys("test@1234")
+
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                )
+            )
+        )
+        el3.click()
+
+        el4 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ACCESSIBILITY_ID,
+                    "Announcement"
+                )
+            )
+        )
+        el4.click()
+
+        el5 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(3)'
+                )
+            )
+        )
+        el5.click()
+
+        el6 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(5)'
+                )
+            )
+        )
+        el6.click()
+
+        el7 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(3)'
+                )
+            )
+        )
+        el7.click()
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Meeting")
+    @allure.description_html("""
+                                                                                          <h2>Verify Instant Meeting info page displays title as "Instant Meeting".
+                                                                                          <br>
+
+                                                                                          <u>Test Case Description</u>
+                                                                                          &nbsp;&nbsp;-&nbsp;&nbsp;
+                                                                                  Check whether Instant Meeting title is displayed correctly in meeting info screen.
+                                                              . 
+                                                                                          <br><br><br>
+
+                                                                                          <u>Expected Result</u>
+
+                                                                                          <br><br>
+
+                                                                                    Meeting title should be displayed as "Instant Meeting"
+                                                                                          <br><br><br>
+
+                                                                                          Client
+                                                                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                                          Katon Meet
+
+                                                                                          <br><br>
+
+                                                                                          Project
+                                                                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                                          Katon Meet
+
+                                                                                          <br><br>
+                                                                                          """)
+    def test_GM_3432__Meeting_Info_Instant_Meeting_Title_Display_Validation_1375(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
+
+        el1 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el1.send_keys("sathees")
+
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el2.send_keys("test@1234")
+
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                )
+            )
+        )
+        el3.click()
+
+        el4 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(66)'
+                )
+            )
+        )
+        el4.click()
+
+        el5 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().text("Instant Meeting")'
+                )
+            )
+        )
+        el5.click()
+
+        el6 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ID,
+                    "com.android.permissioncontroller:id/permission_allow_foreground_only_button"
+                )
+            )
+        )
+        el6.click()
+
+        el7 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ID,
+                    "com.android.permissioncontroller:id/permission_allow_foreground_only_button"
+                )
+            )
+        )
+        el7.click()
+
+        el8 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ACCESSIBILITY_ID,
+                    "Info"
+                )
+            )
+        )
+        el8.click()
+
+        el9 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.CLASS_NAME,
+                    "android.widget.ScrollView"
+                )
+            )
+        )
+        el9.click()
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Meeting")
+    @allure.description_html("""
+                                                                                              <h2>Verify Instant Meeting info page displays only start time.".
+                                                                                              <br>
+
+                                                                                              <u>Test Case Description</u>
+                                                                                              &nbsp;&nbsp;-&nbsp;&nbsp;
+                                                                                    Check whether only start time is displayed in Instant Meeting info screen..
+                                                                  . 
+                                                                                              <br><br><br>
+
+                                                                                              <u>Expected Result</u>
+
+                                                                                              <br><br>
+
+                                                                                        Only the meeting start time should be displayed in meeting info
+                                                                                              <br><br><br>
+
+                                                                                              Client
+                                                                                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                                              Katon Meet
+
+                                                                                              <br><br>
+
+                                                                                              Project
+                                                                                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                                              Katon Meet
+
+                                                                                              <br><br>
+                                                                                              """)
+    def test_GM_3432__Meeting_Info_Instant_Meeting_Start_Time_Display_Validation_1376(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
+
+        el1 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el1.send_keys("sathees")
+
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el2.send_keys("test@1234")
+
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                )
+            )
+        )
+        el3.click()
+
+        el4 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(66)'
+                )
+            )
+        )
+        el4.click()
+
+        el5 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().text("Instant Meeting")'
+                )
+            )
+        )
+        el5.click()
+
+        el6 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ID,
+                    "com.android.permissioncontroller:id/permission_allow_foreground_only_button"
+                )
+            )
+        )
+        el6.click()
+
+        el7 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ID,
+                    "com.android.permissioncontroller:id/permission_allow_foreground_only_button"
+                )
+            )
+        )
+        el7.click()
+
+        el8 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ACCESSIBILITY_ID,
+                    "Info"
+                )
+            )
+        )
+        el8.click()
+
+        el9 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.CLASS_NAME,
+                    "android.widget.ScrollView"
+                )
+            )
+        )
+        el9.click()
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Announcement")
+    @allure.description_html("""
+                                                                                                  <h2>Verify moved search icon works properly from bottom navigation bar..".
+                                                                                                  <br>
+
+                                                                                                  <u>Test Case Description</u>
+                                                                                                  &nbsp;&nbsp;-&nbsp;&nbsp;
+                                                                                       Check whether relocated search icon remains functional from bottom navigation.
+                                                                      . 
+                                                                                                  <br><br><br>
+
+                                                                                                  <u>Expected Result</u>
+
+                                                                                                  <br><br>
+
+                                                                                            Search feature should work successfully from bottom navigation bar
+                                                                                                  <br><br><br>
+
+                                                                                                  Client
+                                                                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                                                  Katon Meet
+
+                                                                                                  <br><br>
+
+                                                                                                  Project
+                                                                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                                                  Katon Meet
+
+                                                                                                  <br><br>
+                                                                                                  """)
+    def test_GM_3218__Announcements_Bottom_Navigation_Search_Accessibility_1355(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
+
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el2.send_keys("sathees")
+
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el3.send_keys("test@1234")
+
+        el4 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                )
+            )
+        )
+        el4.click()
+
+        el5 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(84)'
+                )
+            )
+        )
+        el5.click()
+
+        el6 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(2)'
+                )
+            )
+        )
+        el6.click()
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Recording")
+    @allure.description_html("""
+                                                                                                     <h2>Verify recordings screen opens correctly from Settings module.
+                                                                                                     <br>
+
+                                                                                                     <u>Test Case Description</u>
+                                                                                                     &nbsp;&nbsp;-&nbsp;&nbsp;
+                                                                                          Check whether recordings module is accessible through Settings.
+                                                                         . 
+                                                                                                     <br><br><br>
+
+                                                                                                     <u>Expected Result</u>
+
+                                                                                                     <br><br>
+
+                                                                                               User should navigate successfully to recordings screen
+                                                                                                     <br><br><br>
+
+                                                                                                     Client
+                                                                                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                                                     Katon Meet
+
+                                                                                                     <br><br>
+
+                                                                                                     Project
+                                                                                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                                                     Katon Meet
+
+                                                                                                     <br><br>
+                                                                                                     """)
+    def test_GM_3218__Settings_Recordings_Access_from_Settings_1356(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
+
+        el1 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el1.send_keys("sathees")
+
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el2.send_keys("test@1234")
+
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.XPATH,
+                    "//android.widget.ScrollView/android.view.View[3]"
+                )
+            )
+        )
+        el3.click()
+
+        el4 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(13)'
+                )
+            )
+        )
+        el4.click()
+
+        el5 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(17)'
+                )
+            )
+        )
+        el5.click()
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Search")
+    @allure.description_html("""
+                                                                                                  <h2>Verify that tapping the global search icon navigates the user to the dedicated search screen
+                                                                                                  <br>
+
+                                                                                                  <u>Test Case Description</u>
+                                                                                                  &nbsp;&nbsp;-&nbsp;&nbsp;
+                                                                                        Check whether tapping the global search icon navigates the user to the dedicated search screen.  
+                                                                      . 
+                                                                                                  <br><br><br>
+
+                                                                                                  <u>Expected Result</u>
+
+                                                                                                  <br><br>
+
+                                                                                            User should be able to see the search screen displayed successfully  
+
+                                                                                                  <br><br><br>
+
+                                                                                                  Client
+                                                                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                                                  Katon Meet
+
+                                                                                                  <br><br>
+
+                                                                                                  Project
+                                                                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                                                  Katon Meet
+
+                                                                                                  <br><br>
+                                                                                                  """)
+    def test_GM_97__Search_Global_133(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
+
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el2.send_keys("sathees")
+
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el3.send_keys("test@1234")
+
+        el4 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                )
+            )
+        )
+        el4.click()
+
+        el5 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(84)'
+                )
+            )
+        )
+        el5.click()
+
+        el6 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(2)'
+                )
+            )
+        )
+        el6.click()
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Meeting")
+    @allure.description_html("""
+                                                                                                  <h2>Verify that when the host clicks the "End Call" button, a confirmation pop-up with "Leave Meeting" and "End Meeting for All" options is displayed.
+                                                                                                  <br>
+
+                                                                                                  <u>Test Case Description</u>
+                                                                                                  &nbsp;&nbsp;-&nbsp;&nbsp;
+                                                                                       Check whether a confirmation pop-up with “Leave Meeting” and “End Meeting for All” options is displayed when the host clicks the “End Call” button.
+                                                                      . 
+                                                                                                  <br><br><br>
+
+                                                                                                  <u>Expected Result</u>
+
+                                                                                                  <br><br>
+
+                                                                                           User should be able to see a confirmation pop-up with “Leave Meeting” and “End Meeting for All” options when the host clicks the “End Call” button.
+                                                                                                  <br><br><br>
+
+                                                                                                  Client
+                                                                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                                                  Katon Meet
+
+                                                                                                  <br><br>
+
+                                                                                                  Project
+                                                                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                                                  Katon Meet
+
+                                                                                                  <br><br>
+                                                                                                  """)
+    def test_GM_87__Meeting_Host_137(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
+
+        el1 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el1.send_keys("sathees")
+
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el2.send_keys("test@1234")
+
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                )
+            )
+        )
+        el3.click()
+
+        el4 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(66)'
+                )
+            )
+        )
+        el4.click()
+
+        el5 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().text("Instant Meeting")'
+                )
+            )
+        )
+        el5.click()
+
+        el6 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ID,
+                    "com.android.permissioncontroller:id/permission_allow_foreground_only_button"
+                )
+            )
+        )
+        el6.click()
+
+        el7 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ID,
+                    "com.android.permissioncontroller:id/permission_allow_foreground_only_button"
+                )
+            )
+        )
+        el7.click()
+
+        el8 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(33)'
+                )
+            )
+        )
+        el8.click()
+
+        el9 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(3)'
+                )
+            )
+        )
+        el9.click()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
