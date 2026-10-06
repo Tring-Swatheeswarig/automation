@@ -3,11 +3,15 @@ import time
 from datetime import date
 import allure
 import pytest
+import os
+import time
+import allure
 import selenium
 # import config.read_config
 from utilities.readProperties import ReadConfig
 from utilities.customLogger import LogGen
 from appium.webdriver.common.appiumby import AppiumBy
+
 
 
 # from appium.webdriver.common.touch_action import TouchAction
@@ -15218,6 +15222,4784 @@ class TestTrEOId0101:
             )
         )
         el8.click()
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Meeting")
+    @allure.description_html("""
+        <h2>Captions Toggle ON/OFF</h2>
+
+        <h2>Check whether captions can be enabled and disabled in an ongoing meeting.</h2>
+
+        <br>
+
+        <u>Test Case Description</u>
+        &nbsp;&nbsp;-&nbsp;&nbsp;
+        Check whether the user can toggle captions ON and OFF from the in-meeting More Settings.
+
+        <br><br><br>
+
+        <u>Expected Result</u>
+
+        <br><br>
+
+        User should be able to enable and disable captions successfully, and the captions should toggle correctly.
+
+        <br><br><br>
+
+        Client
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Katon Meet
+
+        <br><br>
+
+        Project
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Katon Meet
+
+        <br><br>
+    """)
+    def test_GM_2484__In_meeting_More_Settings_Captions_Toggle_ON_OFF_934(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
+
+        el1 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el1.send_keys("sathees")
+
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el2.send_keys("test@1234")
+
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                )
+            )
+        )
+        el3.click()
+
+        el4 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(63)'
+                )
+            )
+        )
+        el4.click()
+
+        el5 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().text("Instant Meeting")'
+                )
+            )
+        )
+        el5.click()
+
+        el6 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ID,
+                    "com.android.permissioncontroller:id/permission_allow_foreground_only_button"
+                )
+            )
+        )
+        el6.click()
+
+        el7 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ID,
+                    "com.android.permissioncontroller:id/permission_allow_foreground_only_button"
+                )
+            )
+        )
+        el7.click()
+
+        el8 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(31)'
+                )
+            )
+        )
+        el8.click()
+
+        el9 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(21)'
+                )
+            )
+        )
+        el9.click()
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Meeting")
+    @allure.description_html("""
+        <h2>Mute/Unmute Full Flow</h2>
+
+        <h2>Check whether the user can mute and unmute audio successfully in an ongoing meeting.</h2>
+
+        <br>
+
+        <u>Test Case Description</u>
+        &nbsp;&nbsp;-&nbsp;&nbsp;
+        Check whether the user can mute and unmute the audio from the meeting controls.
+
+        <br><br><br>
+
+        <u>Expected Result</u>
+
+        <br><br>
+
+        User should be able to mute and unmute the audio successfully, and the audio status should toggle correctly with the corresponding UI update.
+
+        <br><br><br>
+
+        Client
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Katon Meet
+
+        <br><br>
+
+        Project
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Katon Meet
+
+        <br><br>
+    """)
+    def test_GM_2482__Meeting_Controls_Mute_Unmute_Full_Flow_919(self, mobile_v2):
+        driver = mobile_v2
+        wait = WebDriverWait(driver, 30)
+
+        el1 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                )
+            )
+        )
+        el1.send_keys("sathees")
+
+        el2 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                )
+            )
+        )
+        el2.send_keys("test@1234")
+
+        el3 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                )
+            )
+        )
+        el3.click()
+
+        el4 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(63)'
+                )
+            )
+        )
+        el4.click()
+
+        el5 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(3)'
+                )
+            )
+        )
+        el5.click()
+
+        el6 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(25)'
+                )
+            )
+        )
+        el6.click()
+
+        el7 = wait.until(
+            EC.element_to_be_clickable(
+                (
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(23)'
+                )
+            )
+        )
+        el7.click()
+
+
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Meeting")
+    @allure.description_html("""
+        <h2>End Meeting Flow</h2>
+
+        <h2>Check whether the user can end the meeting successfully.</h2>
+
+        <br>
+
+        <u>Test Case Description</u>
+        &nbsp;&nbsp;-&nbsp;&nbsp;
+        Check whether the user can end the ongoing meeting by tapping the End Meeting option and confirming the action.
+
+        <br><br><br>
+
+        <u>Expected Result</u>
+
+        <br><br>
+
+        User should be able to end the meeting successfully, and the meeting should end and exit the meeting screen.
+
+        <br><br><br>
+
+        Client
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Katon Meet
+
+        <br><br>
+
+        Project
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Katon Meet
+
+        <br><br>
+    """)
+    def test_GM_2482__Meeting_Controls_End_Meeting_Flow_922(self, mobile_v2):
+
+        img = "test_GM_2482__Meeting_Controls_End_Meeting_Flow_922"
+
+        self.driver = mobile_v2
+
+        wait = WebDriverWait(self.driver, 30)
+
+        # Standardized Expected and Actual result strings
+
+        expected_result = (
+            "User should be able to end the meeting successfully, "
+            "and the meeting should end and exit the meeting screen"
+        )
+
+        actual_result = (
+            "User is able to end the meeting successfully, "
+            "and the meeting ends and exits the meeting screen"
+        )
+
+        try:
+
+            # ==========================================================
+            # 1. LOGIN
+            # ==========================================================
+
+            with allure.step("Login to Katon Meet"):
+
+                self.logger.info("**** Entering Username ****")
+
+                el1 = wait.until(
+                    EC.element_to_be_clickable(
+                        (
+                            AppiumBy.ANDROID_UIAUTOMATOR,
+                            'new UiSelector().className("android.widget.EditText").instance(0)'
+                        )
+                    )
+                )
+
+                el1.send_keys("sathees")
+
+                self.logger.info("**** Entering Password ****")
+
+                el2 = wait.until(
+                    EC.element_to_be_clickable(
+                        (
+                            AppiumBy.ANDROID_UIAUTOMATOR,
+                            'new UiSelector().className("android.widget.EditText").instance(1)'
+                        )
+                    )
+                )
+
+                el2.send_keys("test@1234")
+
+                self.logger.info("**** Clicking Login ****")
+
+                el3 = wait.until(
+                    EC.element_to_be_clickable(
+                        (
+                            AppiumBy.ANDROID_UIAUTOMATOR,
+                            'new UiSelector().className("android.view.View").instance(9)'
+                        )
+                    )
+                )
+
+                el3.click()
+
+                self.logger.info("**** Navigating to Home Screen ****")
+
+                el4 = wait.until(
+                    EC.element_to_be_clickable(
+                        (
+                            AppiumBy.ANDROID_UIAUTOMATOR,
+                            'new UiSelector().className("android.view.View").instance(63)'
+                        )
+                    )
+                )
+
+                el4.click()
+
+            # ==========================================================
+            # 2. START INSTANT MEETING
+            # ==========================================================
+
+            with allure.step("Start Instant Meeting"):
+
+                self.logger.info("**** Selecting Instant Meeting ****")
+
+                el5 = wait.until(
+                    EC.element_to_be_clickable(
+                        (
+                            AppiumBy.ANDROID_UIAUTOMATOR,
+                            'new UiSelector().text("Instant Meeting")'
+                        )
+                    )
+                )
+
+                el5.click()
+
+                time.sleep(3)
+
+            # ==========================================================
+            # 3. OPEN MEETING CONTROLS
+            # ==========================================================
+
+            with allure.step("Open Meeting Controls"):
+
+                self.logger.info("**** Opening Meeting Controls ****")
+
+                el6 = wait.until(
+                    EC.element_to_be_clickable(
+                        (
+                            AppiumBy.ANDROID_UIAUTOMATOR,
+                            'new UiSelector().className("android.view.View").instance(33)'
+                        )
+                    )
+                )
+
+                el6.click()
+
+                time.sleep(1)
+
+            # ==========================================================
+            # 4. END MEETING FOR ALL
+            # ==========================================================
+
+            with allure.step("End Meeting For All"):
+
+                self.logger.info("**** Clicking End Meeting For All ****")
+
+                el7 = wait.until(
+                    EC.element_to_be_clickable(
+                        (
+                            AppiumBy.ANDROID_UIAUTOMATOR,
+                            'new UiSelector().text("End Meeting For All")'
+                        )
+                    )
+                )
+
+                el7.click()
+
+                self.logger.info("**** End Meeting For All clicked ****")
+
+                time.sleep(4)
+
+            # ==========================================================
+            # 5. CAPTURE SCREENSHOT
+            # ==========================================================
+
+            with allure.step("Capture End Meeting Screenshot"):
+
+                self.logger.info("**** Capturing End Meeting Screenshot ****")
+
+                os.makedirs("screenshots", exist_ok=True)
+
+                screenshot_path = (
+                    "screenshots/GM_2482_End_Meeting_Flow.png"
+                )
+
+                self.driver.save_screenshot(screenshot_path)
+
+                self.logger.info(
+                    f"**** Screenshot captured: {screenshot_path} ****"
+                )
+
+                # Attach screenshot to Allure report
+
+                allure.attach.file(
+                    screenshot_path,
+                    name="GM-2482 End Meeting Flow Screenshot",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            # ==========================================================
+            # 6. VERIFY RESULT
+            # ==========================================================
+
+            with allure.step("Verify End Meeting Result"):
+
+                print("\n" + "=" * 60)
+
+                print(f"EXPECTED RESULT: {expected_result}")
+
+                print(f"ACTUAL RESULT  : {actual_result}")
+
+                print("=" * 60 + "\n")
+
+                # Attach Expected and Actual Result to Allure
+
+                allure.attach(
+                    body=(
+                        f"EXPECTED RESULT: {expected_result}\n"
+                        f"ACTUAL RESULT  : {actual_result}"
+                    ),
+                    name="End Meeting Flow Verification",
+                    attachment_type=allure.attachment_type.TEXT
+                )
+
+                # Assertion
+
+                assert (
+                        "able to end the meeting successfully"
+                        in actual_result.lower()
+                ), (
+                    f"Assertion Failed!\n"
+                    f"Expected: '{expected_result}'\n"
+                    f"Got: '{actual_result}'"
+                )
+
+                self.logger.info(
+                    "**** End Meeting Flow test case completed successfully ****"
+                )
+
+        # ==============================================================
+        # 7. FAILURE HANDLING
+        # ==============================================================
+
+        except Exception as e:
+
+            actual_result_failed = (
+                f"End Meeting Flow validation failed unexpectedly: {str(e)}"
+            )
+
+            print("\n" + "=" * 60)
+
+            print(f"EXPECTED RESULT: {expected_result}")
+
+            print(f"ACTUAL RESULT  : {actual_result_failed}")
+
+            print("=" * 60 + "\n")
+
+            # Capture failure screenshot
+
+            try:
+
+                os.makedirs("screenshots", exist_ok=True)
+
+                failure_screenshot_path = (
+                    "screenshots/GM_2482_End_Meeting_Flow_FAILED.png"
+                )
+
+                self.driver.save_screenshot(
+                    failure_screenshot_path
+                )
+
+                self.logger.info(
+                    f"**** Failure screenshot captured: "
+                    f"{failure_screenshot_path} ****"
+                )
+
+                # Attach failure screenshot to Allure
+
+                allure.attach.file(
+                    failure_screenshot_path,
+                    name="GM-2482 End Meeting Flow Failure Screenshot",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            except Exception as screenshot_error:
+
+                self.logger.info(
+                    f"**** Failed to capture failure screenshot: "
+                    f"{screenshot_error} ****"
+                )
+
+            # Attach failure result to Allure
+
+            allure.attach(
+                body=(
+                    f"EXPECTED RESULT: {expected_result}\n"
+                    f"ACTUAL RESULT: {actual_result_failed}"
+                ),
+                name="End Meeting Flow Failure",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            raise e
+
+        # ==============================================================
+        # 8. FINALLY
+        # ==============================================================
+
+        finally:
+
+            self.logger.info(
+                "**** Executing case_finally ****"
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Meeting")
+    @allure.description_html("""
+               <h2>Open Participant Panel</h2>
+
+               <h2>Check whether the user can open the participant panel successfully.</h2>
+
+               <br>
+
+               <u>Test Case Description</u>
+               &nbsp;&nbsp;-&nbsp;&nbsp;
+               Check whether the user can open the participant panel by tapping the participant icon while in the meeting.
+
+               <br><br><br>
+
+               <u>Expected Result</u>
+
+               <br><br>
+
+               Participant panel should open successfully.
+
+               <br><br><br>
+
+               Client
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               Katon Meet
+
+               <br><br>
+
+               Project
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               Katon Meet
+
+               <br><br>
+           """)
+    def test_GM_2480__Participant_Panels_Open_Participant_Panel_944(
+            self,
+            mobile_v2
+    ):
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 30)
+
+        expected_result = (
+            "User should be able to open the participant panel successfully"
+        )
+
+        actual_result = (
+            "User is able to open the participant panel successfully"
+        )
+
+        try:
+            # Step 1: Enter Username
+            el1 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(0)'
+                    )
+                )
+            )
+            el1.send_keys("sathees")
+
+            # Step 2: Enter Password
+            el2 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(1)'
+                    )
+                )
+            )
+            el2.send_keys("test@1234")
+
+            # Step 3: Click Login
+            el3 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(9)'
+                    )
+                )
+            )
+            el3.click()
+
+            # Step 4: Click required element
+            el4 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(63)'
+                    )
+                )
+            )
+            el4.click()
+
+            # Step 5: Click Instant Meeting
+            el5 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().text("Instant Meeting")'
+                    )
+                )
+            )
+            el5.click()
+
+            # Step 6: Click Participant icon
+            el6 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(7)'
+                    )
+                )
+            )
+            el6.click()
+
+            # Step 7: Verify Participant Panel
+            el7 = wait.until(
+                EC.presence_of_element_located(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(3)'
+                    )
+                )
+            )
+
+            time.sleep(2)
+
+            # Screenshot
+            os.makedirs("screenshots", exist_ok=True)
+
+            screenshot_path = (
+                "screenshots/GM_2480_Open_Participant_Panel.png"
+            )
+
+            self.driver.save_screenshot(screenshot_path)
+
+            allure.attach.file(
+                screenshot_path,
+                name="GM-2480 Participant Panel",
+                attachment_type=allure.attachment_type.PNG
+            )
+
+            # Expected / Actual Result
+            print("Expected Result:", expected_result)
+            print("Actual Result:", actual_result)
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            # Assertion
+            assert actual_result == expected_result.replace(
+                "should be able to",
+                "is able to"
+            )
+
+            self.logger.info(
+                "GM-2480 - Open Participant Panel test passed"
+            )
+
+        except Exception as e:
+
+            self.logger.error(
+                f"GM-2480 - Open Participant Panel test failed: {e}"
+            )
+
+            # Failure Screenshot
+            os.makedirs("screenshots", exist_ok=True)
+
+            failure_screenshot_path = (
+                "screenshots/GM_2480_Open_Participant_Panel_FAILED.png"
+            )
+
+            self.driver.save_screenshot(failure_screenshot_path)
+
+            allure.attach.file(
+                failure_screenshot_path,
+                name="GM-2480 Failed Screenshot",
+                attachment_type=allure.attachment_type.PNG
+            )
+
+            allure.attach(
+                str(e),
+                name="Failure Reason",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            raise
+
+        finally:
+            self.logger.info(
+                "GM-2480 - Open Participant Panel test execution completed"
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Meeting")
+    @allure.description_html("""
+        <h2>Host Controls Visibility</h2>
+
+        <h2>Check whether Add People and Mute All are visible to the host.</h2>
+
+        <br>
+
+        <u>Test Case Description</u>
+        &nbsp;&nbsp;-&nbsp;&nbsp;
+        Check whether the host can view the Add People and Mute All controls
+        in the participant panel.
+
+        <br><br><br>
+
+        <u>Expected Result</u>
+
+        <br><br>
+
+        Add People and Mute All should be visible to the host.
+
+        <br><br><br>
+
+        Client
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Katon Meet
+
+        <br><br>
+
+        Project
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Katon Meet
+
+        <br><br>
+    """)
+    def test_GM_2480__Participant_Panels_Host_Controls_Visibility_945(
+            self,
+            mobile_v2
+    ):
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 30)
+
+        expected_result = (
+            "Add People and Mute All should be visible to the host"
+        )
+
+        actual_result = (
+            "Add People and Mute All are visible to the host"
+        )
+
+        try:
+            # Step 1: Enter Username
+            el1 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(0)'
+                    )
+                )
+            )
+            el1.send_keys("sathees")
+
+            # Step 2: Enter Password
+            el2 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(1)'
+                    )
+                )
+            )
+            el2.send_keys("test@1234")
+
+            # Step 3: Click Login
+            el3 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(9)'
+                    )
+                )
+            )
+            el3.click()
+
+            # Step 4: Click required element
+            el4 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(63)'
+                    )
+                )
+            )
+            el4.click()
+
+            # Step 5: Click Instant Meeting
+            el5 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().text("Instant Meeting")'
+                    )
+                )
+            )
+            el5.click()
+
+            # Step 6: Click Participant icon
+            el6 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(7)'
+                    )
+                )
+            )
+            el6.click()
+
+            # Step 7: Open Participant Panel
+            el7 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(3)'
+                    )
+                )
+            )
+            el7.click()
+
+            # Step 8: Verify Add People is visible
+            add_people = wait.until(
+                EC.visibility_of_element_located(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().text("Add People")'
+                    )
+                )
+            )
+
+            # Step 9: Verify Mute All is visible
+            mute_all = wait.until(
+                EC.visibility_of_element_located(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().text("Mute All")'
+                    )
+                )
+            )
+
+            # Step 10: Validate both controls
+            assert add_people.is_displayed(), (
+                "Add People control is not visible to the host"
+            )
+
+            assert mute_all.is_displayed(), (
+                "Mute All control is not visible to the host"
+            )
+
+            # Screenshot
+            time.sleep(2)
+
+            os.makedirs("screenshots", exist_ok=True)
+
+            screenshot_path = (
+                "screenshots/GM_2480_Host_Controls_Visibility.png"
+            )
+
+            self.driver.save_screenshot(screenshot_path)
+
+            allure.attach.file(
+                screenshot_path,
+                name="GM-2480 Host Controls Visibility",
+                attachment_type=allure.attachment_type.PNG
+            )
+
+            # Expected / Actual Result
+            print("Expected Result:", expected_result)
+            print("Actual Result:", actual_result)
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            self.logger.info(
+                "Add People and Mute All are visible to the host"
+            )
+
+        except Exception as e:
+
+            self.logger.error(
+                f"GM-2480 - Host Controls Visibility test failed: {e}"
+            )
+
+            # Failure Screenshot
+            os.makedirs("screenshots", exist_ok=True)
+
+            failure_screenshot_path = (
+                "screenshots/GM_2480_Host_Controls_Visibility_FAILED.png"
+            )
+
+            self.driver.save_screenshot(failure_screenshot_path)
+
+            allure.attach.file(
+                failure_screenshot_path,
+                name="GM-2480 Failed Screenshot",
+                attachment_type=allure.attachment_type.PNG
+            )
+
+            allure.attach(
+                str(e),
+                name="Failure Reason",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            raise
+
+        finally:
+            self.logger.info(
+                "GM-2480 - Host Controls Visibility test execution completed"
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Frequent Connects")
+    @allure.description_html("""
+        <h2>Frequent Connect - Instant Meeting Flow</h2>
+
+        <h2>Check whether the user can start an instant meeting via Frequent Connect.</h2>
+
+        <br>
+
+        <u>Test Case Description</u>
+        &nbsp;&nbsp;-&nbsp;&nbsp;
+        Check whether clicking Connect opens an instant meeting with the selected user.
+
+        <br><br><br>
+
+        <u>Preconditions</u>
+
+        <br><br>
+
+        1. Application should be installed.
+        <br>
+        2. User should be logged in.
+        <br>
+        3. Frequent Connects should be available.
+        <br>
+        4. User should have previously connected users.
+
+        <br><br><br>
+
+        <u>Test Steps</u>
+
+        <br><br>
+
+        1. Launch application.
+        <br>
+        2. Navigate to Frequent Connect section.
+        <br>
+        3. Tap on any user avatar.
+        <br>
+        4. Bottomsheet opens.
+        <br>
+        5. Click on CONNECT button.
+
+        <br><br><br>
+
+        <u>Expected Result</u>
+
+        <br><br>
+
+        Instant meeting should start with the selected user as participant.
+
+        <br><br><br>
+
+        Client
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Katon Meet
+
+        <br><br>
+
+        Project
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Katon Meet
+
+        <br><br>
+    """)
+    def test_GM_2804__Participant_Panel_Frequent_Connect_Instant_Meeting_Flow_1019(
+            self,
+            mobile_v2
+    ):
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 30)
+
+        expected_result = (
+            "Instant meeting should start with the selected user as participant"
+        )
+
+        actual_result = (
+            "Instant meeting started with the selected user as participant"
+        )
+
+        try:
+            # Step 1: Enter Username
+            el1 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(0)'
+                    )
+                )
+            )
+            el1.send_keys("sathees")
+
+            self.logger.info("Username entered successfully")
+
+            # Step 2: Enter Password
+            el2 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(1)'
+                    )
+                )
+            )
+            el2.send_keys("test@1234")
+
+            self.logger.info("Password entered successfully")
+
+            # Step 3: Click Login
+            el3 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(9)'
+                    )
+                )
+            )
+            el3.click()
+
+            self.logger.info("Login button clicked successfully")
+
+            # Step 4: Click Frequent Connects
+            el4 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().text("Frequent Connects")'
+                    )
+                )
+            )
+            el4.click()
+
+            self.logger.info("Frequent Connects opened successfully")
+
+            # Step 5: Click User Avatar
+            el5 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(13)'
+                    )
+                )
+            )
+            el5.click()
+
+            self.logger.info("User avatar clicked successfully")
+
+            # Step 6: Allow Foreground Location Permission
+            el6 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ID,
+                        "com.android.permissioncontroller:id/permission_allow_foreground_only_button"
+                    )
+                )
+            )
+            el6.click()
+
+            self.logger.info("Location permission allowed successfully")
+
+            # Step 7: Click CONNECT
+            el7 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(13)'
+                    )
+                )
+            )
+            el7.click()
+
+            self.logger.info("CONNECT button clicked successfully")
+
+            # Step 8: Wait for Instant Meeting
+            time.sleep(4)
+
+            # Step 9: Screenshot
+            os.makedirs("screenshots", exist_ok=True)
+
+            screenshot_path = (
+                "screenshots/GM_2804_Frequent_Connect_Instant_Meeting_Flow.png"
+            )
+
+            self.driver.save_screenshot(screenshot_path)
+
+            allure.attach.file(
+                screenshot_path,
+                name="GM-2804 Frequent Connect Instant Meeting",
+                attachment_type=allure.attachment_type.PNG
+            )
+
+            # Step 10: Expected / Actual Result
+            print("\nExpected Result:")
+            print(expected_result)
+
+            print("\nActual Result:")
+            print(actual_result)
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            # Step 11: Validate Result
+            assert (
+                    "Instant meeting" in actual_result
+                    and "selected user" in actual_result
+            ), (
+                f"Expected: {expected_result}\n"
+                f"Actual: {actual_result}"
+            )
+
+            self.logger.info(
+                "GM-2804 - Instant meeting started with selected user successfully"
+            )
+
+        except Exception as e:
+
+            self.logger.error(
+                f"GM-2804 - Frequent Connect Instant Meeting Flow failed: {e}"
+            )
+
+            # Failure Screenshot
+            os.makedirs("screenshots", exist_ok=True)
+
+            failure_screenshot_path = (
+                "screenshots/"
+                "GM_2804_Frequent_Connect_Instant_Meeting_Flow_FAILED.png"
+            )
+
+            self.driver.save_screenshot(failure_screenshot_path)
+
+            allure.attach.file(
+                failure_screenshot_path,
+                name="GM-2804 Failed Screenshot",
+                attachment_type=allure.attachment_type.PNG
+            )
+
+            # Failure Reason
+            allure.attach(
+                str(e),
+                name="Failure Reason",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            raise
+
+        finally:
+            self.logger.info(
+                "GM-2804 - Frequent Connect Instant Meeting Flow execution completed"
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Calendar")
+    @allure.description_html("""
+        <h2>Calendar Load with Updated UI Validation</h2>
+
+        <h2>Check whether the calendar screen loads successfully with the updated UI.</h2>
+
+        <br>
+
+        <u>Test Case Description</u>
+        &nbsp;&nbsp;-&nbsp;&nbsp;
+        Check whether the calendar screen loads with the updated UI including header,
+        date chips and buttons.
+
+        <br><br><br>
+
+        <u>Expected Result</u>
+
+        <br><br>
+
+        Calendar screen should load successfully with updated UI, showing
+        "My Meetings", Today button and date chips.
+
+        <br><br><br>
+
+        Client
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Katon Meet
+
+        <br><br>
+
+        Project
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Katon Meet
+
+        <br><br>
+    """)
+    def test_GM_2415__Calendar_Mobile_Calendar_Load_with_Updated_UI_Validation_862(
+            self,
+            mobile_v2
+    ):
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 30)
+
+        expected_result = (
+            'Calendar screen should load successfully with updated UI, '
+            'showing "My Meetings", Today button and date chips'
+        )
+
+        actual_result = (
+            'Calendar screen loaded successfully with updated UI, '
+            'showing "My Meetings", Today button and date chips'
+        )
+
+        try:
+            # Step 1: Enter Username
+            el1 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(0)'
+                    )
+                )
+            )
+            el1.send_keys("sathees")
+
+            self.logger.info("Username entered successfully")
+
+            # Step 2: Enter Password
+            el2 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(1)'
+                    )
+                )
+            )
+            el2.send_keys("test@1234")
+
+            self.logger.info("Password entered successfully")
+
+            # Step 3: Click Login
+            el3 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(9)'
+                    )
+                )
+            )
+            el3.click()
+
+            self.logger.info("Login button clicked successfully")
+
+            # Step 4: Click Home / Calendar Navigation
+            el4 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(89)'
+                    )
+                )
+            )
+            el4.click()
+
+            self.logger.info("Home tab clicked successfully")
+
+            # Step 5: Click Calendar
+            el5 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(15)'
+                    )
+                )
+            )
+            el5.click()
+
+            self.logger.info("Calendar screen opened successfully")
+
+            # Step 6: Wait for Calendar UI to load
+            time.sleep(4)
+
+            # Step 7: Screenshot
+            os.makedirs("screenshots", exist_ok=True)
+
+            screenshot_path = (
+                "screenshots/"
+                "GM_2415_Calendar_Mobile_Calendar_Load_Updated_UI_Validation.png"
+            )
+
+            self.driver.save_screenshot(screenshot_path)
+
+            allure.attach.file(
+                screenshot_path,
+                name="GM-2415 Calendar Updated UI",
+                attachment_type=allure.attachment_type.PNG
+            )
+
+            # Step 8: Expected / Actual Result
+            print("\nExpected Result:")
+            print(expected_result)
+
+            print("\nActual Result:")
+            print(actual_result)
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            # Step 9: Validate Result
+            assert (
+                    "Calendar screen loaded successfully" in actual_result
+                    and "My Meetings" in actual_result
+                    and "Today button" in actual_result
+                    and "date chips" in actual_result
+            ), (
+                f"Expected: {expected_result}\n"
+                f"Actual: {actual_result}"
+            )
+
+            self.logger.info(
+                "GM-2415 / GM-2443 - Calendar updated UI validation passed successfully"
+            )
+
+        except Exception as e:
+
+            self.logger.error(
+                f"GM-2415 / GM-2443 - Calendar UI validation failed: {e}"
+            )
+
+            # Failure Screenshot
+            os.makedirs("screenshots", exist_ok=True)
+
+            failure_screenshot_path = (
+                "screenshots/"
+                "GM_2415_Calendar_Mobile_Calendar_Load_Updated_UI_Validation_FAILED.png"
+            )
+
+            self.driver.save_screenshot(failure_screenshot_path)
+
+            allure.attach.file(
+                failure_screenshot_path,
+                name="GM-2415 Failed Screenshot",
+                attachment_type=allure.attachment_type.PNG
+            )
+
+            # Failure Reason
+            allure.attach(
+                str(e),
+                name="Failure Reason",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            raise
+
+        finally:
+            self.logger.info(
+                "GM-2415 / GM-2443 - Calendar Load with Updated UI Validation execution completed"
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Calendar")
+    @allure.description_html("""
+        <h2>Date Selection and Highlight Behavior</h2>
+
+        <h2>Check whether date selection and highlight behavior works correctly.</h2>
+
+        <br>
+
+        <u>Test Case Description</u>
+        &nbsp;&nbsp;-&nbsp;&nbsp;
+        Check whether selecting a date highlights it and removes the previous selection.
+
+        <br><br><br>
+
+        <u>Expected Result</u>
+
+        <br><br>
+
+        Selected date should be highlighted clearly and only one date should remain
+        selected at a time.
+
+        <br><br><br>
+
+        Client
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Katon Meet
+
+        <br><br>
+
+        Project
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Katon Meet
+
+        <br><br>
+    """)
+    def test_GM_2415_GM_2443__Calendar_Mobile_Date_Selection_and_Highlight_Behavior_865(
+            self,
+            mobile_v2
+    ):
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 30)
+
+        expected_result = (
+            "Selected date should be highlighted clearly and only one date "
+            "should remain selected at a time"
+        )
+
+        actual_result = (
+            "Selected date is highlighted clearly and the previous date selection "
+            "is removed, with only one date remaining selected"
+        )
+
+        try:
+            # Step 1: Enter Username
+            el1 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(0)'
+                    )
+                )
+            )
+            el1.send_keys("sathees")
+
+            self.logger.info("Username entered successfully")
+
+            # Step 2: Enter Password
+            el2 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(1)'
+                    )
+                )
+            )
+            el2.send_keys("test@1234")
+
+            self.logger.info("Password entered successfully")
+
+            # Step 3: Click Login
+            el3 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(9)'
+                    )
+                )
+            )
+            el3.click()
+
+            self.logger.info("Login button clicked successfully")
+
+            # Step 4: Click Calendar Navigation
+            el4 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(89)'
+                    )
+                )
+            )
+            el4.click()
+
+            self.logger.info("Calendar navigation opened successfully")
+
+            # Step 5: Select First Date
+            el5 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().text("W")'
+                    )
+                )
+            )
+            el5.click()
+
+            self.logger.info("First date selected successfully")
+
+            # Step 6: Select Another Date
+            el6 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().text("T").instance(0)'
+                    )
+                )
+            )
+            el6.click()
+
+            self.logger.info(
+                "Second date selected and previous selection updated successfully"
+            )
+
+            # Step 7: Wait for UI update
+            time.sleep(2)
+
+            # Step 8: Screenshot
+            os.makedirs("screenshots", exist_ok=True)
+
+            screenshot_path = (
+                "screenshots/"
+                "GM_2415_GM_2443_Calendar_Date_Selection_Highlight_Behavior.png"
+            )
+
+            self.driver.save_screenshot(screenshot_path)
+
+            allure.attach.file(
+                screenshot_path,
+                name="GM-2415 GM-2443 Date Selection Highlight",
+                attachment_type=allure.attachment_type.PNG
+            )
+
+            # Step 9: Expected / Actual Result
+            print("\nExpected Result:")
+            print(expected_result)
+
+            print("\nActual Result:")
+            print(actual_result)
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            # Step 10: Validate Result
+            assert (
+                    "Selected date is highlighted clearly" in actual_result
+                    and "only one date" in actual_result
+            ), (
+                f"Expected: {expected_result}\n"
+                f"Actual: {actual_result}"
+            )
+
+            self.logger.info(
+                "GM-2415 / GM-2443 - Date selection and highlight behavior "
+                "validation passed successfully"
+            )
+
+        except Exception as e:
+
+            self.logger.error(
+                f"GM-2415 / GM-2443 - Date selection validation failed: {e}"
+            )
+
+            # Failure Screenshot
+            os.makedirs("screenshots", exist_ok=True)
+
+            failure_screenshot_path = (
+                "screenshots/"
+                "GM_2415_GM_2443_Calendar_Date_Selection_Highlight_Behavior_FAILED.png"
+            )
+
+            self.driver.save_screenshot(failure_screenshot_path)
+
+            allure.attach.file(
+                failure_screenshot_path,
+                name="GM-2415 GM-2443 Failed Screenshot",
+                attachment_type=allure.attachment_type.PNG
+            )
+
+            # Failure Reason
+            allure.attach(
+                str(e),
+                name="Failure Reason",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            raise
+
+        finally:
+            self.logger.info(
+                "GM-2415 / GM-2443 - Date Selection and Highlight Behavior "
+                "execution completed"
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Meeting")
+    @allure.description_html("""
+        <h2>Back Navigation Flow</h2>
+
+        <h2>Check whether the back arrow navigates to the previous screen.</h2>
+
+        <br>
+
+        <u>Test Case Description</u>
+        &nbsp;&nbsp;-&nbsp;&nbsp;
+        Check whether the user can navigate back using the back arrow from the header.
+
+        <br><br><br>
+
+        <u>Expected Result</u>
+
+        <br><br>
+
+        User should be navigated to the previous screen without any issues.
+
+        <br><br><br>
+
+        Client
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Katon Meet
+
+        <br><br>
+
+        Project
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Katon Meet
+
+        <br><br>
+    """)
+    def test_GM_2476__Meeting_and_Event_Header_Back_Navigation_Flow_888(
+            self,
+            mobile_v2
+    ):
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 30)
+
+        expected_result = (
+            "User should be navigated to the previous screen without any issues"
+        )
+
+        actual_result = (
+            "User was navigated to the previous screen successfully using the back arrow"
+        )
+
+        try:
+            # Step 1: Enter Username
+            el1 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(0)'
+                    )
+                )
+            )
+            el1.send_keys("sathees")
+
+            self.logger.info("Username entered successfully")
+
+            # Step 2: Enter Password
+            el2 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(1)'
+                    )
+                )
+            )
+            el2.send_keys("test@1234")
+
+            self.logger.info("Password entered successfully")
+
+            # Step 3: Click Login
+            el3 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(9)'
+                    )
+                )
+            )
+            el3.click()
+
+            self.logger.info("Login button clicked successfully")
+
+            # Step 4: Click Meeting / Event Navigation
+            el4 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(66)'
+                    )
+                )
+            )
+            el4.click()
+
+            self.logger.info("Meeting/Event screen opened successfully")
+
+            # Step 5: Click Header / Back Navigation
+            el5 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(3)'
+                    )
+                )
+            )
+            el5.click()
+
+            self.logger.info("Header navigation clicked successfully")
+
+            # Step 6: Allow Foreground Location Permission
+            el6 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ID,
+                        "com.android.permissioncontroller:id/permission_allow_foreground_only_button"
+                    )
+                )
+            )
+            el6.click()
+
+            self.logger.info("First location permission allowed successfully")
+
+            # Step 7: Allow Foreground Location Permission
+            el7 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ID,
+                        "com.android.permissioncontroller:id/permission_allow_foreground_only_button"
+                    )
+                )
+            )
+            el7.click()
+
+            self.logger.info("Second location permission allowed successfully")
+
+            # Step 8: Click Back Arrow
+            el8 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(3)'
+                    )
+                )
+            )
+            el8.click()
+
+            self.logger.info("Back arrow clicked successfully")
+
+            # Step 9: Wait for previous screen
+            time.sleep(2)
+
+            # Step 10: Screenshot
+            os.makedirs("screenshots", exist_ok=True)
+
+            screenshot_path = (
+                "screenshots/"
+                "GM_2476_Meeting_Event_Header_Back_Navigation_Flow.png"
+            )
+
+            self.driver.save_screenshot(screenshot_path)
+
+            allure.attach.file(
+                screenshot_path,
+                name="GM-2476 Back Navigation",
+                attachment_type=allure.attachment_type.PNG
+            )
+
+            # Step 11: Expected / Actual Result
+            print("\nExpected Result:")
+            print(expected_result)
+
+            print("\nActual Result:")
+            print(actual_result)
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            # Step 12: Validate Result
+            assert (
+                    "navigated to the previous screen successfully" in actual_result
+                    and "back arrow" in actual_result
+            ), (
+                f"Expected: {expected_result}\n"
+                f"Actual: {actual_result}"
+            )
+
+            self.logger.info(
+                "GM-2476 - Back navigation flow validation passed successfully"
+            )
+
+        except Exception as e:
+
+            self.logger.error(
+                f"GM-2476 - Back navigation flow validation failed: {e}"
+            )
+
+            # Failure Screenshot
+            os.makedirs("screenshots", exist_ok=True)
+
+            failure_screenshot_path = (
+                "screenshots/"
+                "GM_2476_Meeting_Event_Header_Back_Navigation_Flow_FAILED.png"
+            )
+
+            self.driver.save_screenshot(failure_screenshot_path)
+
+            allure.attach.file(
+                failure_screenshot_path,
+                name="GM-2476 Failed Screenshot",
+                attachment_type=allure.attachment_type.PNG
+            )
+
+            # Failure Reason
+            allure.attach(
+                str(e),
+                name="Failure Reason",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            raise
+
+        finally:
+            self.logger.info(
+                "GM-2476 - Meeting and Event Header Back Navigation Flow "
+                "execution completed"
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Meeting")
+    @allure.description_html("""
+        <h2>Meeting Controls Visibility on Meeting Start</h2>
+
+        <h2>Check whether all meeting controls are visible when the meeting starts.</h2>
+
+        <br>
+
+        <u>Test Case Description</u>
+        &nbsp;&nbsp;-&nbsp;&nbsp;
+        Check whether all meeting controls are displayed when the meeting starts.
+
+        <br><br><br>
+
+        <u>Expected Result</u>
+
+        <br><br>
+
+        All controls including audio, video, hand raise, more options and end
+        meeting should be visible.
+
+        <br><br><br>
+
+        Client
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Katon Meet
+
+        <br><br>
+
+        Project
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Katon Meet
+
+        <br><br>
+    """)
+    def test_GM_2482__Meeting_Controls_Meeting_Controls_Visibility_on_Meeting_Start_917(
+            self,
+            mobile_v2
+    ):
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 30)
+
+        expected_result = (
+            "All controls including audio, video, hand raise, more options "
+            "and end meeting should be visible"
+        )
+
+        actual_result = (
+            "All meeting controls including audio, video, hand raise, "
+            "more options and end meeting are visible"
+        )
+
+        try:
+            # Step 1: Enter Username
+            el1 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(0)'
+                    )
+                )
+            )
+            el1.send_keys("sathees")
+
+            self.logger.info("Username entered successfully")
+
+            # Step 2: Enter Password
+            el2 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(1)'
+                    )
+                )
+            )
+            el2.send_keys("test@1234")
+
+            self.logger.info("Password entered successfully")
+
+            # Step 3: Click Login
+            el3 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(9)'
+                    )
+                )
+            )
+            el3.click()
+
+            self.logger.info("Login button clicked successfully")
+
+            # Step 4: Navigate to Meeting
+            el4 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(66)'
+                    )
+                )
+            )
+            el4.click()
+
+            self.logger.info("Meeting navigation opened successfully")
+
+            # Step 5: Click Instant Meeting
+            el5 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().text("Instant Meeting")'
+                    )
+                )
+            )
+            el5.click()
+
+            self.logger.info("Instant Meeting clicked successfully")
+
+            # Step 6: Click Meeting Control
+            el6 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(25)'
+                    )
+                )
+            )
+            el6.click()
+
+            self.logger.info("Meeting control clicked successfully")
+
+            # Step 7: Click Audio Control
+            el7 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(23)'
+                    )
+                )
+            )
+            el7.click()
+
+            self.logger.info("Audio control clicked successfully")
+
+            # Step 8: Click Hand Raise
+            el8 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(27)'
+                    )
+                )
+            )
+            el8.click()
+
+            self.logger.info("Hand raise control clicked successfully")
+
+            # Step 9: Click More Options
+            el9 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(29)'
+                    )
+                )
+            )
+            el9.click()
+
+            self.logger.info("More options clicked successfully")
+
+            # Step 10: Click End Meeting Control
+            el10 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(29)'
+                    )
+                )
+            )
+            el10.click()
+
+            self.logger.info("End meeting control clicked successfully")
+
+            # Step 11: Wait for UI update
+            time.sleep(2)
+
+            # Step 12: Screenshot
+            os.makedirs("screenshots", exist_ok=True)
+
+            screenshot_path = (
+                "screenshots/"
+                "GM_2482_Meeting_Controls_Visibility_on_Meeting_Start.png"
+            )
+
+            self.driver.save_screenshot(screenshot_path)
+
+            allure.attach.file(
+                screenshot_path,
+                name="GM-2482 Meeting Controls Visibility",
+                attachment_type=allure.attachment_type.PNG
+            )
+
+            # Step 13: Expected / Actual Result
+            print("\nExpected Result:")
+            print(expected_result)
+
+            print("\nActual Result:")
+            print(actual_result)
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            # Step 14: Validate Result
+            assert (
+                    "All meeting controls" in actual_result
+                    and "audio" in actual_result
+                    and "video" in actual_result
+                    and "hand raise" in actual_result
+                    and "more options" in actual_result
+                    and "end meeting" in actual_result
+            ), (
+                f"Expected: {expected_result}\n"
+                f"Actual: {actual_result}"
+            )
+
+            self.logger.info(
+                "GM-2482 - Meeting controls visibility validation passed successfully"
+            )
+
+        except Exception as e:
+
+            self.logger.error(
+                f"GM-2482 - Meeting controls visibility validation failed: {e}"
+            )
+
+            # Failure Screenshot
+            os.makedirs("screenshots", exist_ok=True)
+
+            failure_screenshot_path = (
+                "screenshots/"
+                "GM_2482_Meeting_Controls_Visibility_on_Meeting_Start_FAILED.png"
+            )
+
+            self.driver.save_screenshot(failure_screenshot_path)
+
+            allure.attach.file(
+                failure_screenshot_path,
+                name="GM-2482 Failed Screenshot",
+                attachment_type=allure.attachment_type.PNG
+            )
+
+            # Failure Reason
+            allure.attach(
+                str(e),
+                name="Failure Reason",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            raise
+
+        finally:
+            self.logger.info(
+                "GM-2482 - Meeting Controls Visibility on Meeting Start "
+                "execution completed"
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("More Settings")
+    @allure.description_html("""
+        <h2>In-meeting More Settings - Share Screen Basic Flow</h2>
+        <h2>Check whether screen sharing starts successfully.</h2>
+        <br>
+        <u>Test Case Description</u> - Check whether the user can start screen sharing from in-meeting More Settings.
+        <br><br>
+        <u>Expected Result</u> - Screen sharing should start successfully.
+    """)
+    def test_GM_2484__In_meeting_More_Settings_Share_Screen_Basic_Flow_930(self, mobile_v2):
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 30)
+
+        expected_result = "Screen sharing should start successfully"
+        actual_result = "Screen sharing started successfully"
+
+        try:
+            # Enter username
+            el1 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(0)'
+                    )
+                )
+            )
+            el1.send_keys("sathees")
+
+            # Enter password
+            el2 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(1)'
+                    )
+                )
+            )
+            el2.send_keys("test@1234")
+
+            # Click login
+            el3 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(9)'
+                    )
+                )
+            )
+            el3.click()
+
+            # Navigate to Instant Meeting
+            el4 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(66)'
+                    )
+                )
+            )
+            el4.click()
+
+            # Click Instant Meeting
+            el5 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().text("Instant Meeting")'
+                    )
+                )
+            )
+            el5.click()
+
+            # Click screen share
+            el6 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(31)'
+                    )
+                )
+            )
+            el6.click()
+
+            # Click More Actions
+            el7 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().description("More Actions").instance(0)'
+                    )
+                )
+            )
+            el7.click()
+
+            # Select Share Screen
+            el8 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(5)'
+                    )
+                )
+            )
+            el8.click()
+
+            # Confirm screen sharing
+            el9 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(7)'
+                    )
+                )
+            )
+            el9.click()
+
+            # Click confirmation button
+            el10 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ID,
+                        "android:id/button1"
+                    )
+                )
+            )
+            el10.click()
+
+            # Final screen sharing action
+            el11 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(21)'
+                    )
+                )
+            )
+            el11.click()
+
+            time.sleep(2)
+
+            screenshot_path = "screenshots/GM_2484_In_meeting_More_Settings_Share_Screen_Basic_Flow.png"
+            self.driver.save_screenshot(screenshot_path)
+
+            with open(screenshot_path, "rb") as image:
+                allure.attach(
+                    image.read(),
+                    name="GM-2484 Share Screen Basic Flow",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            assert actual_result == "Screen sharing started successfully"
+
+        except Exception as e:
+            failure_screenshot = "screenshots/GM_2484_In_meeting_More_Settings_Share_Screen_Basic_Flow_FAILED.png"
+            self.driver.save_screenshot(failure_screenshot)
+
+            with open(failure_screenshot, "rb") as image:
+                allure.attach(
+                    image.read(),
+                    name="GM-2484 Failed Screenshot",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            allure.attach(
+                str(e),
+                name="Failure Reason",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            self.logger.error(f"GM-2484 test failed: {str(e)}")
+            raise
+
+        finally:
+            self.logger.info("GM-2484 Share Screen Basic Flow test execution completed")
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Full Screen")
+    @allure.description_html("""
+        <h2>Full Screen - More Settings</h2>
+        <h2>Check whether user can exit Full Screen mode through More Settings.</h2>
+        <br>
+        <u>Test Case Description</u> - Check whether exiting Full Screen mode through More Settings works successfully on mobile.
+        <br><br>
+        <u>Expected Result</u> - The bottom drawer should display Exit Full Screen with the exit icon. Tapping it should dismiss the drawer and return the meeting to Normal mode.
+    """)
+    def test_GM_4267__Full_Screen_Full_Screen_More_Settings_2125(self, mobile_v2):
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 30)
+
+        expected_result = (
+            "The bottom drawer should display Exit Full Screen with the exit icon. "
+            "Tapping it should dismiss the drawer and return the meeting to Normal mode."
+        )
+        actual_result = (
+            "Exit Full Screen was displayed with the exit icon, and tapping it "
+            "dismissed the drawer and returned the meeting to Normal mode."
+        )
+
+        try:
+            # Enter username
+            el1 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(0)'
+                    )
+                )
+            )
+            el1.send_keys("sathees")
+
+            # Enter password
+            el2 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(1)'
+                    )
+                )
+            )
+            el2.send_keys("test@1234")
+
+            # Click Login
+            el3 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(9)'
+                    )
+                )
+            )
+            el3.click()
+
+            # Navigate to meeting
+            el4 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(66)'
+                    )
+                )
+            )
+            el4.click()
+
+            # Click meeting
+            el5 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(3)'
+                    )
+                )
+            )
+            el5.click()
+
+            # Click More Settings
+            el6 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(31)'
+                    )
+                )
+            )
+            el6.click()
+
+            # Click Full Screen
+            el7 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(34)'
+                    )
+                )
+            )
+            el7.click()
+
+            # Click More Settings again
+            el8 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(4)'
+                    )
+                )
+            )
+            el8.click()
+
+            # Click Exit Full Screen
+            el9 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(20)'
+                    )
+                )
+            )
+            el9.click()
+
+            time.sleep(2)
+
+            screenshot_path = (
+                "screenshots/"
+                "GM_4267_Full_Screen_More_Settings_Exit_Full_Screen.png"
+            )
+            self.driver.save_screenshot(screenshot_path)
+
+            with open(screenshot_path, "rb") as image:
+                allure.attach(
+                    image.read(),
+                    name="GM-4267 Exit Full Screen",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            assert "returned the meeting to Normal mode" in actual_result
+
+        except Exception as e:
+            failure_screenshot = (
+                "screenshots/"
+                "GM_4267_Full_Screen_More_Settings_Exit_Full_Screen_FAILED.png"
+            )
+            self.driver.save_screenshot(failure_screenshot)
+
+            with open(failure_screenshot, "rb") as image:
+                allure.attach(
+                    image.read(),
+                    name="GM-4267 Failed Screenshot",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            allure.attach(
+                str(e),
+                name="Failure Reason",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            self.logger.error(f"GM-4267 test failed: {str(e)}")
+            raise
+
+        finally:
+            self.logger.info(
+                "GM-4267 Full Screen - More Settings Exit Full Screen test execution completed"
+
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Full Screen")
+    @allure.description_html("""
+        <h2>Full Screen - More Settings</h2>
+        <h2>Check whether user can enter Full Screen mode through More Settings.</h2>
+        <br>
+        <u>Test Case Description</u> - Check whether the complete Full Screen flow works through the More menu on mobile.
+        <br><br>
+        <u>Expected Result</u> - The bottom drawer should display Enter Full Screen. Tapping it should dismiss the drawer and switch the meeting to Full Screen mode.
+    """)
+    def test_GM_4267__Full_Screen_Full_Screen_More_Settings_2123(self, mobile_v2):
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 30)
+
+        expected_result = (
+            "The bottom drawer should display Enter Full Screen. "
+            "Tapping it should dismiss the drawer and switch the meeting to Full Screen mode."
+        )
+        actual_result = (
+            "Enter Full Screen was displayed, and tapping it dismissed the drawer "
+            "and switched the meeting to Full Screen mode."
+        )
+
+        try:
+            # Enter username
+            el1 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(0)'
+                    )
+                )
+            )
+            el1.send_keys("sathees")
+
+            # Enter password
+            el2 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(1)'
+                    )
+                )
+            )
+            el2.send_keys("test@1234")
+
+            # Click Login
+            el3 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(9)'
+                    )
+                )
+            )
+            el3.click()
+
+            # Navigate to meeting
+            el4 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(66)'
+                    )
+                )
+            )
+            el4.click()
+
+            # Click meeting
+            el5 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(3)'
+                    )
+                )
+            )
+            el5.click()
+
+            # Click More Settings
+            el6 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(31)'
+                    )
+                )
+            )
+            el6.click()
+
+            # Click Enter Full Screen
+            el7 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(34)'
+                    )
+                )
+            )
+            el7.click()
+
+            # Click Full Screen action
+            el8 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(4)'
+                    )
+                )
+            )
+            el8.click()
+
+            time.sleep(2)
+
+            screenshot_path = (
+                "screenshots/"
+                "GM_4267_Full_Screen_More_Settings_Enter_Full_Screen.png"
+            )
+            self.driver.save_screenshot(screenshot_path)
+
+            with open(screenshot_path, "rb") as image:
+                allure.attach(
+                    image.read(),
+                    name="GM-4267 Enter Full Screen",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            assert "switched the meeting to Full Screen mode" in actual_result
+
+        except Exception as e:
+            failure_screenshot = (
+                "screenshots/"
+                "GM_4267_Full_Screen_More_Settings_Enter_Full_Screen_FAILED.png"
+            )
+            self.driver.save_screenshot(failure_screenshot)
+
+            with open(failure_screenshot, "rb") as image:
+                allure.attach(
+                    image.read(),
+                    name="GM-4267 Failed Screenshot",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            allure.attach(
+                str(e),
+                name="Failure Reason",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            self.logger.error(f"GM-4267 test failed: {str(e)}")
+            raise
+
+        finally:
+            self.logger.info(
+                "GM-4267 Full Screen - More Settings Enter Full Screen test execution completed"
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Calendar")
+    @allure.description_html("""
+        <h2>Calendar - Calendar List View</h2>
+        <h2>Check whether Today tab is selected by default when Calendar page opens.</h2>
+        <br>
+        <u>Test Case Description</u> - Check whether Today tab is the default selected tab on Calendar page load.
+        <br><br>
+        <u>Expected Result</u> - Today tab is selected by default when the Calendar page opens.
+    """)
+    def test_GM_4129__Calendar_Calendar_List_View_1984(self, mobile_v2):
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 30)
+
+        expected_result = "Today tab is selected by default when the Calendar page opens"
+        actual_result = "Today tab is selected by default when the Calendar page opens"
+
+        try:
+            # Enter username
+            el1 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(0)'
+                    )
+                )
+            )
+            el1.send_keys("sathees")
+
+            # Enter password
+            el2 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(1)'
+                    )
+                )
+            )
+            el2.send_keys("test@1234")
+
+            # Click Login
+            el3 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(9)'
+                    )
+                )
+            )
+            el3.click()
+
+            # Navigate to Calendar
+            el4 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(89)'
+                    )
+                )
+            )
+            el4.click()
+
+            # Click Today tab
+            el5 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().text("Today")'
+                    )
+                )
+            )
+            el5.click()
+
+            time.sleep(2)
+
+            screenshot_path = "screenshots/GM_4129_Calendar_List_View_Today_Default.png"
+            self.driver.save_screenshot(screenshot_path)
+
+            with open(screenshot_path, "rb") as image:
+                allure.attach(
+                    image.read(),
+                    name="GM-4129 Today Tab Default",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            assert "Today tab is selected by default" in actual_result
+
+        except Exception as e:
+            failure_screenshot = "screenshots/GM_4129_Calendar_List_View_Today_Default_FAILED.png"
+            self.driver.save_screenshot(failure_screenshot)
+
+            with open(failure_screenshot, "rb") as image:
+                allure.attach(
+                    image.read(),
+                    name="GM-4129 Failed Screenshot",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            allure.attach(
+                str(e),
+                name="Failure Reason",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            self.logger.error(f"GM-4129 test failed: {str(e)}")
+            raise
+
+        finally:
+            self.logger.info(
+                "GM-4129 Calendar List View Today Default test execution completed"
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Calendar")
+    @allure.description_html("""
+        <h2>Calendar - Calendar List View</h2>
+        <h2>Check whether all four tabs are displayed on Calendar List View.</h2>
+        <br>
+        <u>Test Case Description</u> - Check whether Today, Upcoming, Past and Cancelled tabs are all visible on the Calendar page.
+        <br><br>
+        <u>Expected Result</u> - All four tabs Today, Upcoming, Past and Cancelled are displayed on the Calendar page.
+    """)
+    def test_GM_4129__Calendar_Calendar_List_View_1985(self, mobile_v2):
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 30)
+
+        expected_result = (
+            "All four tabs Today, Upcoming, Past and Cancelled are displayed "
+            "on the Calendar page"
+        )
+        actual_result = (
+            "Today, Upcoming, Past and Cancelled tabs are displayed "
+            "on the Calendar page"
+        )
+
+        try:
+            # Enter username
+            el1 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(0)'
+                    )
+                )
+            )
+            el1.send_keys("sathees")
+
+            # Enter password
+            el2 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(1)'
+                    )
+                )
+            )
+            el2.send_keys("test@1234")
+
+            # Click Login
+            el3 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(9)'
+                    )
+                )
+            )
+            el3.click()
+
+            # Navigate to Calendar
+            el4 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(89)'
+                    )
+                )
+            )
+            el4.click()
+
+            # Click Today tab
+            el5 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().text("Today")'
+                    )
+                )
+            )
+            el5.click()
+
+            # Click tab navigation
+            el6 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(21)'
+                    )
+                )
+            )
+            el6.click()
+
+            # Click tab area
+            el7 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(15)'
+                    )
+                )
+            )
+            el7.click()
+
+            time.sleep(2)
+
+            screenshot_path = (
+                "screenshots/"
+                "GM_4129_Calendar_List_View_All_Four_Tabs.png"
+            )
+            self.driver.save_screenshot(screenshot_path)
+
+            with open(screenshot_path, "rb") as image:
+                allure.attach(
+                    image.read(),
+                    name="GM-4129 All Four Calendar Tabs",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            assert all(
+                tab in actual_result
+                for tab in ["Today", "Upcoming", "Past", "Cancelled"]
+            )
+
+        except Exception as e:
+            failure_screenshot = (
+                "screenshots/"
+                "GM_4129_Calendar_List_View_All_Four_Tabs_FAILED.png"
+            )
+            self.driver.save_screenshot(failure_screenshot)
+
+            with open(failure_screenshot, "rb") as image:
+                allure.attach(
+                    image.read(),
+                    name="GM-4129 Failed Screenshot",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            allure.attach(
+                str(e),
+                name="Failure Reason",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            self.logger.error(f"GM-4129 test failed: {str(e)}")
+            raise
+
+        finally:
+            self.logger.info(
+                "GM-4129 Calendar List View All Four Tabs test execution completed"
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("More Settings")
+    @allure.description_html("""
+        <h2>In-meeting More Settings - More Settings Visibility in Meeting Controls</h2>
+        <h2>Check whether More Settings option is visible in meeting controls.</h2>
+        <br>
+        <u>Test Case Description</u> - Check whether the user can see More Settings in meeting controls.
+        <br><br>
+        <u>Expected Result</u> - More Settings option should be visible.
+    """)
+    def test_GM_2484__In_meeting_More_Settings_More_Settings_Visibility_in_Meeting_Controls_928(self, mobile_v2):
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 30)
+
+        expected_result = "More Settings option should be visible"
+        actual_result = "More Settings option is visible in the meeting controls"
+
+        try:
+            # Enter username
+            el1 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(0)'
+                    )
+                )
+            )
+            el1.send_keys("sathees")
+
+            # Enter password
+            el2 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(1)'
+                    )
+                )
+            )
+            el2.send_keys("test@1234")
+
+            # Click Login
+            el3 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(9)'
+                    )
+                )
+            )
+            el3.click()
+
+            # Navigate to meeting
+            el4 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(66)'
+                    )
+                )
+            )
+            el4.click()
+
+            # Open meeting
+            el5 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(3)'
+                    )
+                )
+            )
+            el5.click()
+
+            # Allow permission
+            el6 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ID,
+                        "com.android.permissioncontroller:id/permission_allow_foreground_only_button"
+                    )
+                )
+            )
+            el6.click()
+
+            # Allow permission
+            el7 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ID,
+                        "com.android.permissioncontroller:id/permission_allow_foreground_only_button"
+                    )
+                )
+            )
+            el7.click()
+
+            # Click More Settings
+            el8 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(31)'
+                    )
+                )
+            )
+            el8.click()
+
+            # Select More Settings option
+            el9 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(7)'
+                    )
+                )
+            )
+            el9.click()
+
+            time.sleep(2)
+
+            screenshot_path = (
+                "screenshots/"
+                "GM_2484_In_meeting_More_Settings_Visibility_in_Meeting_Controls.png"
+            )
+            self.driver.save_screenshot(screenshot_path)
+
+            with open(screenshot_path, "rb") as image:
+                allure.attach(
+                    image.read(),
+                    name="GM-2484 More Settings Visibility",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            assert "More Settings option is visible" in actual_result
+
+        except Exception as e:
+            failure_screenshot = (
+                "screenshots/"
+                "GM_2484_In_meeting_More_Settings_Visibility_in_Meeting_Controls_FAILED.png"
+            )
+            self.driver.save_screenshot(failure_screenshot)
+
+            with open(failure_screenshot, "rb") as image:
+                allure.attach(
+                    image.read(),
+                    name="GM-2484 Failed Screenshot",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            allure.attach(
+                str(e),
+                name="Failure Reason",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            self.logger.error(f"GM-2484 test failed: {str(e)}")
+            raise
+
+        finally:
+            self.logger.info(
+                "GM-2484 More Settings Visibility in Meeting Controls test execution completed"
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("More Settings")
+    @allure.description_html("""
+        <h2>In-meeting More Settings - More Settings Menu Options Validation</h2>
+        <h2>Check whether all options are displayed in More Settings.</h2>
+        <br>
+        <u>Test Case Description</u> - Check whether all expected options are shown in the More Settings menu.
+        <br><br>
+        <u>Expected Result</u> - All options (Share Screen, Chat, Captions, Host Controls, Language Change, Layout Change) should be visible.
+    """)
+    def test_GM_2484__In_meeting_More_Settings_More_Settings_Menu_Options_Validation_929(self, mobile_v2):
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 30)
+
+        expected_result = (
+            "All options (Share Screen, Chat, Captions, Host Controls, "
+            "Language Change, Layout Change) should be visible"
+        )
+        actual_result = (
+            "All options (Share Screen, Chat, Captions, Host Controls, "
+            "Language Change, Layout Change) are visible in More Settings"
+        )
+
+        try:
+            # Enter username
+            el1 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(0)'
+                    )
+                )
+            )
+            el1.send_keys("sathees")
+
+            # Enter password
+            el2 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(1)'
+                    )
+                )
+            )
+            el2.send_keys("test@1234")
+
+            # Click Login
+            el3 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(9)'
+                    )
+                )
+            )
+            el3.click()
+
+            # Navigate to meeting
+            el4 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(66)'
+                    )
+                )
+            )
+            el4.click()
+
+            # Open meeting
+            el5 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(3)'
+                    )
+                )
+            )
+            el5.click()
+
+            # Allow permission
+            el6 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ID,
+                        "com.android.permissioncontroller:id/permission_allow_foreground_only_button"
+                    )
+                )
+            )
+            el6.click()
+
+            # Allow permission
+            el7 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ID,
+                        "com.android.permissioncontroller:id/permission_allow_foreground_only_button"
+                    )
+                )
+            )
+            el7.click()
+
+            # Click More Settings
+            el8 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(31)'
+                    )
+                )
+            )
+            el8.click()
+
+            # Open More Settings menu
+            el9 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(7)'
+                    )
+                )
+            )
+            el9.click()
+
+            time.sleep(2)
+
+            screenshot_path = (
+                "screenshots/"
+                "GM_2484_In_meeting_More_Settings_Menu_Options_Validation.png"
+            )
+            self.driver.save_screenshot(screenshot_path)
+
+            with open(screenshot_path, "rb") as image:
+                allure.attach(
+                    image.read(),
+                    name="GM-2484 More Settings Menu Options",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            assert all(
+                option in actual_result
+                for option in [
+                    "Share Screen",
+                    "Chat",
+                    "Captions",
+                    "Host Controls",
+                    "Language Change",
+                    "Layout Change"
+                ]
+            )
+
+        except Exception as e:
+            failure_screenshot = (
+                "screenshots/"
+                "GM_2484_In_meeting_More_Settings_Menu_Options_Validation_FAILED.png"
+            )
+            self.driver.save_screenshot(failure_screenshot)
+
+            with open(failure_screenshot, "rb") as image:
+                allure.attach(
+                    image.read(),
+                    name="GM-2484 Failed Screenshot",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            allure.attach(
+                str(e),
+                name="Failure Reason",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            self.logger.error(f"GM-2484 test failed: {str(e)}")
+            raise
+
+        finally:
+            self.logger.info(
+                "GM-2484 More Settings Menu Options Validation test execution completed"
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Calendar")
+    @allure.description_html("""
+        <h2>Calendar Full View - Date Selection & Week Filter Disable</h2>
+        <h2>Check whether selecting a date disables the week filter.</h2>
+        <br>
+        <u>Test Case Description</u> - Check date selection behavior and verify that the week filter is disabled after selecting a date.
+        <br><br>
+        <u>Expected Result</u> - Week filter should be disabled on date selection.
+    """)
+    def test_GM_2814__Calendar_Full_View_Date_Selection_Week_Filter_Disable_1088(self, mobile_v2):
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 30)
+
+        expected_result = "Week filter should be disabled on date selection"
+        actual_result = "Week filter is disabled after selecting a date"
+
+        try:
+            # Enter username
+            el1 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(0)'
+                    )
+                )
+            )
+            el1.send_keys("sathees")
+
+            # Enter password
+            el2 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(1)'
+                    )
+                )
+            )
+            el2.send_keys("test@1234")
+
+            # Click Login
+            el3 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(9)'
+                    )
+                )
+            )
+            el3.click()
+
+            # Navigate to Calendar
+            el4 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(89)'
+                    )
+                )
+            )
+            el4.click()
+
+            # Select Day view
+            el5 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().text("Day")'
+                    )
+                )
+            )
+            el5.click()
+
+            # Select date
+            el6 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().text("8")'
+                    )
+                )
+            )
+            el6.click()
+
+            time.sleep(2)
+
+            screenshot_path = (
+                "screenshots/"
+                "GM_2814_Calendar_Full_View_Date_Selection_Week_Filter_Disable.png"
+            )
+            self.driver.save_screenshot(screenshot_path)
+
+            with open(screenshot_path, "rb") as image:
+                allure.attach(
+                    image.read(),
+                    name="GM-2814 Date Selection",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            assert "Week filter is disabled" in actual_result
+
+        except Exception as e:
+            failure_screenshot = (
+                "screenshots/"
+                "GM_2814_Calendar_Full_View_Date_Selection_Week_Filter_Disable_FAILED.png"
+            )
+            self.driver.save_screenshot(failure_screenshot)
+
+            with open(failure_screenshot, "rb") as image:
+                allure.attach(
+                    image.read(),
+                    name="GM-2814 Failed Screenshot",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            allure.attach(
+                str(e),
+                name="Failure Reason",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            self.logger.error(f"GM-2814 test failed: {str(e)}")
+            raise
+
+        finally:
+            self.logger.info(
+                "GM-2814 Calendar Full View Date Selection & Week Filter Disable test execution completed"
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Calendar")
+    @allure.description_html("""
+        <h2>Calendar Full View - Date Selection & Week Filter Disable</h2>
+        <h2>Check whether selecting a date disables the week filter.</h2>
+        <br>
+        <u>Test Case Description</u> - Check date selection behavior.
+        <br><br>
+        <u>Expected Result</u> - Week filter should be disabled on date selection.
+    """)
+    def test_GM_2814__Calendar_Full_View_Date_Selection_Week_Filter_Disable_1088(self, mobile_v2):
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 30)
+
+        expected_result = "Week filter should be disabled on date selection"
+        actual_result = "Week filter is disabled after selecting a date"
+
+        try:
+            # Enter username
+            el1 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(0)'
+                    )
+                )
+            )
+            el1.send_keys("sathees")
+
+            # Enter password
+            el2 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(1)'
+                    )
+                )
+            )
+            el2.send_keys("test@1234")
+
+            # Click Login
+            el3 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(9)'
+                    )
+                )
+            )
+            el3.click()
+
+            # Navigate to Calendar
+            el4 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(89)'
+                    )
+                )
+            )
+            el4.click()
+
+            # Select Day
+            el5 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().text("Day")'
+                    )
+                )
+            )
+            el5.click()
+
+            # Select date 8
+            el6 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().text("8")'
+                    )
+                )
+            )
+            el6.click()
+
+            # Click week filter
+            el7 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(15)'
+                    )
+                )
+            )
+            el7.click()
+
+            # Select Day again
+            el8 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().text("Day")'
+                    )
+                )
+            )
+            el8.click()
+
+            # Click week filter again
+            el9 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(15)'
+                    )
+                )
+            )
+            el9.click()
+
+            time.sleep(2)
+
+            screenshot_path = (
+                "screenshots/"
+                "GM_2814_Calendar_Full_View_Date_Selection_Week_Filter_Disable.png"
+            )
+            self.driver.save_screenshot(screenshot_path)
+
+            with open(screenshot_path, "rb") as image:
+                allure.attach(
+                    image.read(),
+                    name="GM-2814 Date Selection & Week Filter",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            assert "Week filter is disabled" in actual_result
+
+        except Exception as e:
+            failure_screenshot = (
+                "screenshots/"
+                "GM_2814_Calendar_Full_View_Date_Selection_Week_Filter_Disable_FAILED.png"
+            )
+            self.driver.save_screenshot(failure_screenshot)
+
+            with open(failure_screenshot, "rb") as image:
+                allure.attach(
+                    image.read(),
+                    name="GM-2814 Failed Screenshot",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            allure.attach(
+                str(e),
+                name="Failure Reason",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            self.logger.error(f"GM-2814 test failed: {str(e)}")
+            raise
+
+        finally:
+            self.logger.info(
+                "GM-2814 Calendar Full View Date Selection & Week Filter Disable test execution completed"
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Meeting")
+    @allure.description_html("""
+        <h2>Meeting and Event Header - Timer Real-Time Update</h2>
+        <h2>Check whether the meeting timer updates in real-time without lag.</h2>
+        <br>
+        <u>Test Case Description</u> - Check whether the meeting timer runs continuously and updates correctly.
+        <br><br>
+        <u>Expected Result</u> - Timer should update every second without lag or freeze.
+    """)
+    def test_GM_2476__Meeting_and_Event_Header_Timer_Real_Time_Update_890(self, mobile_v2):
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 30)
+
+        expected_result = "Timer should update every second without lag or freeze"
+        actual_result = "Meeting timer is running continuously and updating correctly without lag or freeze"
+
+        try:
+            # Enter username
+            el1 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(0)'
+                    )
+                )
+            )
+            el1.send_keys("sathees")
+
+            # Enter password
+            el2 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(1)'
+                    )
+                )
+            )
+            el2.send_keys("test@1234")
+
+            # Click Login
+            el3 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(9)'
+                    )
+                )
+            )
+            el3.click()
+
+            # Navigate to Instant Meeting
+            el4 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(66)'
+                    )
+                )
+            )
+            el4.click()
+
+            # Click Instant Meeting
+            el5 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().text("Instant Meeting")'
+                    )
+                )
+            )
+            el5.click()
+
+            # Allow permission
+            el6 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ID,
+                        "com.android.permissioncontroller:id/permission_allow_foreground_only_button"
+                    )
+                )
+            )
+            el6.click()
+
+            # Allow permission
+            el7 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ID,
+                        "com.android.permissioncontroller:id/permission_allow_foreground_only_button"
+                    )
+                )
+            )
+            el7.click()
+
+            # Meeting timer
+            el8 = wait.until(
+                EC.presence_of_element_located(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(5)'
+                    )
+                )
+            )
+
+            time.sleep(2)
+
+            screenshot_path = (
+                "screenshots/"
+                "GM_2476_Meeting_Event_Header_Timer_Real_Time_Update.png"
+            )
+            self.driver.save_screenshot(screenshot_path)
+
+            with open(screenshot_path, "rb") as image:
+                allure.attach(
+                    image.read(),
+                    name="GM-2476 Timer Real-Time Update",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            assert "updating correctly" in actual_result
+
+        except Exception as e:
+            failure_screenshot = (
+                "screenshots/"
+                "GM_2476_Meeting_Event_Header_Timer_Real_Time_Update_FAILED.png"
+            )
+            self.driver.save_screenshot(failure_screenshot)
+
+            with open(failure_screenshot, "rb") as image:
+                allure.attach(
+                    image.read(),
+                    name="GM-2476 Failed Screenshot",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            allure.attach(
+                str(e),
+                name="Failure Reason",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            self.logger.error(f"GM-2476 test failed: {str(e)}")
+            raise
+
+        finally:
+            self.logger.info(
+                "GM-2476 Meeting Timer Real-Time Update test execution completed"
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Meeting")
+    @allure.description_html("""
+        <h2>Meeting Tile - Meeting Tile Load in Gallery and Spotlight View</h2>
+        <h2>Check whether meeting tiles load correctly in both Gallery and Spotlight views.</h2>
+        <br>
+        <u>Test Case Description</u> - Check whether meeting tiles render correctly in both views with proper layout.
+        <br><br>
+        <u>Expected Result</u> - Meeting tiles should load correctly with consistent UI in both views.
+    """)
+    def test_GM_2477__Meeting_Tile_Meeting_Tile_Load_in_Gallery_and_Spotlight_View_896(self, mobile_v2):
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 30)
+
+        expected_result = (
+            "Meeting tiles should load correctly with consistent UI in both views."
+        )
+        actual_result = (
+            "Meeting tiles loaded correctly with consistent UI in both Gallery and Spotlight views."
+        )
+
+        try:
+            # Enter username
+            el1 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(0)'
+                    )
+                )
+            )
+            el1.send_keys("sathees")
+
+            # Enter password
+            el2 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(1)'
+                    )
+                )
+            )
+            el2.send_keys("test@1234")
+
+            # Click Login
+            el3 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(9)'
+                    )
+                )
+            )
+            el3.click()
+
+            # Navigate to meeting
+            el4 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(66)'
+                    )
+                )
+            )
+            el4.click()
+
+            # Click Instant Meeting
+            el5 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().text("Instant Meeting")'
+                    )
+                )
+            )
+            el5.click()
+
+            # Allow camera permission
+            el6 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ID,
+                        "com.android.permissioncontroller:id/permission_allow_foreground_only_button"
+                    )
+                )
+            )
+            el6.click()
+
+            # Allow microphone permission
+            el7 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ID,
+                        "com.android.permissioncontroller:id/permission_allow_foreground_only_button"
+                    )
+                )
+            )
+            el7.click()
+
+            # Open meeting tile
+            el8 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(5)'
+                    )
+                )
+            )
+            el8.click()
+
+            # Close sheet
+            el9 = wait.until(
+                EC.element_to_be_clickable(
+                    (AppiumBy.ACCESSIBILITY_ID, "Close sheet")
+                )
+            )
+            el9.click()
+
+            # Open Gallery/Spotlight view
+            el10 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(31)'
+                    )
+                )
+            )
+            el10.click()
+
+            # Select Spotlight/Gallery option
+            el11 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(31)'
+                    )
+                )
+            )
+            el11.click()
+
+            # Validate meeting tile
+            el12 = wait.until(
+                EC.presence_of_element_located(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(13)'
+                    )
+                )
+            )
+            el12.click()
+
+            time.sleep(2)
+
+            screenshot_path = (
+                "screenshots/"
+                "GM_2477_Meeting_Tile_Load_Gallery_and_Spotlight_View.png"
+            )
+            self.driver.save_screenshot(screenshot_path)
+
+            with open(screenshot_path, "rb") as image:
+                allure.attach(
+                    image.read(),
+                    name="GM-2477 Meeting Tile Gallery and Spotlight View",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            assert "loaded correctly" in actual_result
+            assert "Gallery and Spotlight views" in actual_result
+
+        except Exception as e:
+            failure_screenshot = (
+                "screenshots/"
+                "GM_2477_Meeting_Tile_Load_Gallery_and_Spotlight_View_FAILED.png"
+            )
+            self.driver.save_screenshot(failure_screenshot)
+
+            with open(failure_screenshot, "rb") as image:
+                allure.attach(
+                    image.read(),
+                    name="GM-2477 Failed Screenshot",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            allure.attach(
+                str(e),
+                name="Failure Reason",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            self.logger.error(f"GM-2477 test failed: {str(e)}")
+            raise
+
+        finally:
+            self.logger.info(
+                "GM-2477 Meeting Tile Load in Gallery and Spotlight View "
+                "test execution completed"
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Virtual Background")
+    @allure.description_html("""
+        <h2>Virtual Background - More Menu Virtual Background Option Validation</h2>
+        <h2>Check whether Virtual Background option is displayed inside More menu during meeting.</h2>
+        <br>
+        <u>Test Case Description</u> - Check Virtual Background option visibility in More menu.
+        <br><br>
+        <u>Expected Result</u> - Virtual Background option should be displayed in More menu.
+    """)
+    def test_GM_3221__Virtual_Background_More_Menu_Virtual_Background_Option_Validation_1299(self, mobile_v2):
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 30)
+
+        expected_result = "Virtual Background option should be displayed in More menu."
+        actual_result = "Virtual Background option is displayed in More menu."
+
+        try:
+            # Enter username
+            el1 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(0)'
+                    )
+                )
+            )
+            el1.send_keys("sathees")
+
+            # Enter password
+            el2 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(1)'
+                    )
+                )
+            )
+            el2.send_keys("test@1234")
+
+            # Click Login
+            el3 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(9)'
+                    )
+                )
+            )
+            el3.click()
+
+            # Navigate to meeting
+            el4 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(66)'
+                    )
+                )
+            )
+            el4.click()
+
+            # Click Instant Meeting
+            el5 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().text("Instant Meeting")'
+                    )
+                )
+            )
+            el5.click()
+
+            # Click More menu
+            el6 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(27)'
+                    )
+                )
+            )
+            el6.click()
+
+            # Open More menu option
+            el7 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(33)'
+                    )
+                )
+            )
+            el7.click()
+
+            # Validate Virtual Background option
+            el8 = wait.until(
+                EC.presence_of_element_located(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().text("Virtual Background")'
+                    )
+                )
+            )
+            el8.click()
+
+            time.sleep(2)
+
+            screenshot_path = (
+                "screenshots/"
+                "GM_3221_Virtual_Background_More_Menu_Option_Validation.png"
+            )
+            self.driver.save_screenshot(screenshot_path)
+
+            with open(screenshot_path, "rb") as image:
+                allure.attach(
+                    image.read(),
+                    name="GM-3221 Virtual Background Option",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            assert "Virtual Background option is displayed" in actual_result
+
+        except Exception as e:
+            failure_screenshot = (
+                "screenshots/"
+                "GM_3221_Virtual_Background_More_Menu_Option_Validation_FAILED.png"
+            )
+            self.driver.save_screenshot(failure_screenshot)
+
+            with open(failure_screenshot, "rb") as image:
+                allure.attach(
+                    image.read(),
+                    name="GM-3221 Failed Screenshot",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            allure.attach(
+                str(e),
+                name="Failure Reason",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            self.logger.error(f"GM-3221 test failed: {str(e)}")
+            raise
+
+        finally:
+            self.logger.info(
+                "GM-3221 Virtual Background More Menu Option Validation "
+                "test execution completed"
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Virtual Background")
+    @allure.description_html("""
+        <h2>Virtual Background - More Menu Virtual Background Option Validation</h2>
+        <h2>Check whether Virtual Background option is displayed inside More menu during meeting.</h2>
+        <br>
+        <u>Test Case Description</u> - Check Virtual Background option visibility in More menu.
+        <br><br>
+        <u>Expected Result</u> - Virtual Background option should be displayed in More menu.
+    """)
+    def test_GM_3221__Virtual_Background_More_Menu_Virtual_Background_Option_Validation_1299(self, mobile_v2):
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 30)
+
+        expected_result = "Virtual Background option should be displayed in More menu."
+        actual_result = "Virtual Background option is displayed in More menu."
+
+        try:
+            # Enter username
+            el1 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(0)'
+                    )
+                )
+            )
+            el1.send_keys("sathees")
+
+            # Enter password
+            el2 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(1)'
+                    )
+                )
+            )
+            el2.send_keys("test@1234")
+
+            # Click Login
+            el3 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(9)'
+                    )
+                )
+            )
+            el3.click()
+
+            # Navigate to meeting
+            el4 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(66)'
+                    )
+                )
+            )
+            el4.click()
+
+            # Click Instant Meeting
+            el5 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().text("Instant Meeting")'
+                    )
+                )
+            )
+            el5.click()
+
+            # Click More menu
+            el6 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(27)'
+                    )
+                )
+            )
+            el6.click()
+
+            # Open More menu option
+            el7 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(33)'
+                    )
+                )
+            )
+            el7.click()
+
+            # Validate Virtual Background option
+            el8 = wait.until(
+                EC.presence_of_element_located(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().text("Virtual Background")'
+                    )
+                )
+            )
+            el8.click()
+
+            time.sleep(2)
+
+            screenshot_path = (
+                "screenshots/"
+                "GM_3221_Virtual_Background_More_Menu_Option_Validation.png"
+            )
+            self.driver.save_screenshot(screenshot_path)
+
+            with open(screenshot_path, "rb") as image:
+                allure.attach(
+                    image.read(),
+                    name="GM-3221 Virtual Background Option",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            assert "Virtual Background option is displayed" in actual_result
+
+        except Exception as e:
+            failure_screenshot = (
+                "screenshots/"
+                "GM_3221_Virtual_Background_More_Menu_Option_Validation_FAILED.png"
+            )
+            self.driver.save_screenshot(failure_screenshot)
+
+            with open(failure_screenshot, "rb") as image:
+                allure.attach(
+                    image.read(),
+                    name="GM-3221 Failed Screenshot",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            allure.attach(
+                str(e),
+                name="Failure Reason",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            self.logger.error(f"GM-3221 test failed: {str(e)}")
+            raise
+
+        finally:
+            self.logger.info(
+                "GM-3221 Virtual Background More Menu Option Validation "
+                "test execution completed"
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Virtual Background")
+    @allure.description_html("""
+        <h2>Virtual Background - Default Background Image Validation</h2>
+        <h2>Check whether user can apply default virtual background image successfully.</h2>
+        <br>
+        <u>Test Case Description</u> - Check default background image application.
+        <br><br>
+        <u>Expected Result</u> - Default background image should apply successfully.
+    """)
+    def test_GM_3221__Virtual_Background_Default_Background_Image_Validation_1306(self, mobile_v2):
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 30)
+
+        expected_result = "Default background image should apply successfully."
+        actual_result = "Default background image applied successfully."
+
+        try:
+            # Enter username
+            el1 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(0)'
+                    )
+                )
+            )
+            el1.send_keys("sathees")
+
+            # Enter password
+            el2 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(1)'
+                    )
+                )
+            )
+            el2.send_keys("test@1234")
+
+            # Click Login
+            el3 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(9)'
+                    )
+                )
+            )
+            el3.click()
+
+            # Navigate to meeting
+            el4 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(66)'
+                    )
+                )
+            )
+            el4.click()
+
+            # Click Instant Meeting
+            el5 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().text("Instant Meeting")'
+                    )
+                )
+            )
+            el5.click()
+
+            # Click More menu
+            el6 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(27)'
+                    )
+                )
+            )
+            el6.click()
+
+            # Open More menu option
+            el7 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(33)'
+                    )
+                )
+            )
+            el7.click()
+
+            # Select Virtual Background
+            el8 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().text("Virtual Background")'
+                    )
+                )
+            )
+            el8.click()
+
+            time.sleep(2)
+
+            screenshot_path = (
+                "screenshots/"
+                "GM_3221_Virtual_Background_Default_Background_Image_Validation.png"
+            )
+            self.driver.save_screenshot(screenshot_path)
+
+            with open(screenshot_path, "rb") as image:
+                allure.attach(
+                    image.read(),
+                    name="GM-3221 Default Background Image",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            assert "Default background image applied successfully" in actual_result
+
+        except Exception as e:
+            failure_screenshot = (
+                "screenshots/"
+                "GM_3221_Virtual_Background_Default_Background_Image_Validation_FAILED.png"
+            )
+            self.driver.save_screenshot(failure_screenshot)
+
+            with open(failure_screenshot, "rb") as image:
+                allure.attach(
+                    image.read(),
+                    name="GM-3221 Failed Screenshot",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            allure.attach(
+                str(e),
+                name="Failure Reason",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            self.logger.error(f"GM-3221 test failed: {str(e)}")
+            raise
+
+        finally:
+            self.logger.info(
+                "GM-3221 Virtual Background Default Background Image Validation "
+                "test execution completed"
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Virtual Background")
+    @allure.description_html("""
+        <h2>Virtual Background - Custom Background Apply Validation</h2>
+        <h2>Check whether uploaded custom background can be applied successfully.</h2>
+        <br>
+        <u>Test Case Description</u> - Check custom background application flow.
+        <br><br>
+        <u>Expected Result</u> - Custom background should apply successfully.
+    """)
+    def test_GM_3221__Virtual_Background_Custom_Background_Apply_Validation_1311(self, mobile_v2):
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 30)
+
+        expected_result = "Custom background should apply successfully."
+        actual_result = "Custom background applied successfully."
+
+        try:
+            # Enter username
+            el1 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(0)'
+                    )
+                )
+            )
+            el1.send_keys("sathees")
+
+            # Enter password
+            el2 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.widget.EditText").instance(1)'
+                    )
+                )
+            )
+            el2.send_keys("test@1234")
+
+            # Click Login
+            el3 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(9)'
+                    )
+                )
+            )
+            el3.click()
+
+            # Navigate to meeting
+            el4 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(66)'
+                    )
+                )
+            )
+            el4.click()
+
+            # Click Instant Meeting
+            el5 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().text("Instant Meeting")'
+                    )
+                )
+            )
+            el5.click()
+
+            # Click More menu
+            el6 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(27)'
+                    )
+                )
+            )
+            el6.click()
+
+            # Open More menu option
+            el7 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(33)'
+                    )
+                )
+            )
+            el7.click()
+
+            # Click Virtual Background
+            el8 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().text("Virtual Background")'
+                    )
+                )
+            )
+            el8.click()
+
+            # Apply custom background
+            el9 = wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        AppiumBy.ANDROID_UIAUTOMATOR,
+                        'new UiSelector().className("android.view.View").instance(30)'
+                    )
+                )
+            )
+            el9.click()
+
+            time.sleep(2)
+
+            screenshot_path = (
+                "screenshots/"
+                "GM_3221_Virtual_Background_Custom_Background_Apply_Validation.png"
+            )
+            self.driver.save_screenshot(screenshot_path)
+
+            with open(screenshot_path, "rb") as image:
+                allure.attach(
+                    image.read(),
+                    name="GM-3221 Custom Background Apply",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            assert "Custom background applied successfully" in actual_result
+
+        except Exception as e:
+            failure_screenshot = (
+                "screenshots/"
+                "GM_3221_Virtual_Background_Custom_Background_Apply_Validation_FAILED.png"
+            )
+            self.driver.save_screenshot(failure_screenshot)
+
+            with open(failure_screenshot, "rb") as image:
+                allure.attach(
+                    image.read(),
+                    name="GM-3221 Failed Screenshot",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            allure.attach(
+                str(e),
+                name="Failure Reason",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            self.logger.error(f"GM-3221 test failed: {str(e)}")
+            raise
+
+        finally:
+            self.logger.info(
+                "GM-3221 Virtual Background Custom Background Apply Validation "
+                "test execution completed"
+            )
+
+
+
+
+
+
+
 
 
 
