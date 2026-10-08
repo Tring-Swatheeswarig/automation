@@ -24042,6 +24042,2541 @@ class TestTrEOId0101:
 
 
 
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Raw calendar")
+    @allure.description_html("""
+        <h2>Calendar Events - Raw Event Details</h2>
+        <h2>Check whether users can view and manage raw calendar event details without a meeting link.</h2>
+        <br>
+        <u>Test Case Description</u> - Check whether raw calendar event details are displayed correctly without a meeting link.
+        <br><br>
+        <u>Expected Result</u> - Event details should be displayed correctly without meeting-link information.
+    """)
+    def test_Calendar_Events_Raw_Event_Details_2248(self, mobile_v2):
+        img = "Calendar_Events_Raw_Event_Details_2248"
+
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 15)
+
+        expected_result = (
+            "Event details should be displayed correctly without "
+            "meeting-link information."
+        )
+
+        actual_result = (
+            "Raw calendar event details are displayed correctly "
+            "without meeting-link information."
+        )
+
+        el_target = None
+
+        with allure.step("1. Enter username"):
+            el1 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                ))
+            )
+            el1.send_keys("sathees")
+
+        with allure.step("2. Enter password"):
+            el2 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                ))
+            )
+            el2.send_keys("test@1234")
+
+        with allure.step("3. Sign in"):
+            el3 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                ))
+            )
+            el3.click()
+
+        with allure.step("4. Select Calendar Event"):
+            el4 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(63)'
+                ))
+            )
+            el4.click()
+
+        with allure.step("5. Tap Schedule Meeting"):
+            el5 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().text("Schedule Meeting")'
+                ))
+            )
+            el5.click()
+
+        with allure.step("6. Enter Event Details"):
+            el6 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                ))
+            )
+            el6.send_keys("checking")
+
+        with allure.step("7. Select Event Option"):
+            el7 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(8)'
+                ))
+            )
+            el7.click()
+
+        with allure.step("8. View Raw Event Details"):
+            el8 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(45)'
+                ))
+            )
+            el8.click()
+            el_target = el8
+
+        with allure.step("9. Capture Photo Evidence & Assert Success"):
+            try:
+                screenshot_png = self.driver.get_screenshot_as_png()
+
+                allure.attach(
+                    screenshot_png,
+                    name=f"Photo_Evidence_{img}",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            except Exception as img_err:
+                print(f"Screenshot capture failed: {img_err}")
+
+            assert el_target is not None
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Calendar")
+    @allure.description_html("""
+        <h2>Invite UI - Home Screen - Ongoing Meeting</h2>
+        <h2>Check whether a "NOW" tag and highlighted background appear when the current time falls within the meeting duration.</h2>
+        <br>
+        <u>Test Case Description</u> - Check whether ongoing meeting tiles display the "NOW" tag and highlighted background when the current time falls within the meeting duration.
+        <br><br>
+        <u>Expected Result</u> - Meeting tiles that are currently in progress should display a "NOW" tag and highlighted background.
+    """)
+    def test_GM_361_Invite_UI_Home_Screen_184(self, mobile_v2):
+        img = "GM_361_Invite_UI_Home_Screen_184"
+
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 15)
+
+        expected_result = (
+            'Meeting tiles that are currently in progress should display '
+            'a "NOW" tag and highlighted background.'
+        )
+
+        actual_result = (
+            'The ongoing meeting tile displays the "NOW" tag and '
+            'highlighted background.'
+        )
+
+        el_target = None
+
+        with allure.step("1. Enter username"):
+            el1 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                ))
+            )
+            el1.send_keys("sathees")
+
+        with allure.step("2. Enter password"):
+            el2 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                ))
+            )
+            el2.send_keys("test@1234")
+
+        with allure.step("3. Sign in"):
+            el3 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                ))
+            )
+            el3.click()
+
+        with allure.step("4. Open Home Screen Meeting"):
+            el4 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(53)'
+                ))
+            )
+            el4.click()
+            el_target = el4
+
+        with allure.step("5. Verify NOW Tag and Highlighted Background"):
+            try:
+                screenshot_png = self.driver.get_screenshot_as_png()
+
+                allure.attach(
+                    screenshot_png,
+                    name=f"Photo_Evidence_{img}",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            except Exception as img_err:
+                print(f"Screenshot capture failed: {img_err}")
+
+            assert el_target is not None
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Raw calendar")
+    @allure.description_html("""
+        <h2>Calendar Events - Start Meeting - No Link</h2>
+        <h2>Check whether the Start Meeting option is unavailable when no meeting link is associated with the raw calendar event.</h2>
+        <br>
+        <u>Test Case Description</u> - Check whether the Start Meeting option is not displayed for a raw calendar event without a meeting link.
+        <br><br>
+        <u>Expected Result</u> - The Start Meeting option should not be displayed for the raw calendar event.
+    """)
+    def test_Calendar_Events_Start_Meeting_No_Link_2249(self, mobile_v2):
+        img = "Calendar_Events_Start_Meeting_No_Link_2249"
+
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 15)
+
+        expected_result = (
+            "The Start Meeting option should not be displayed "
+            "for the raw calendar event without a meeting link."
+        )
+
+        actual_result = (
+            "The Start Meeting option is not displayed for the "
+            "raw calendar event."
+        )
+
+        el_target = None
+
+        with allure.step("1. Enter username"):
+            el1 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                ))
+            )
+            el1.send_keys("sathees")
+
+        with allure.step("2. Enter password"):
+            el2 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                ))
+            )
+            el2.send_keys("test@1234")
+
+        with allure.step("3. Sign in"):
+            el3 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                ))
+            )
+            el3.click()
+
+        with allure.step("4. Open Raw Calendar Event"):
+            el4 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(56)'
+                ))
+            )
+            el4.click()
+
+        with allure.step("5. Open Calendar Event Details"):
+            el5 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.CLASS_NAME,
+                    "android.widget.ScrollView"
+                ))
+            )
+            el5.click()
+            el_target = el5
+
+        with allure.step("6. Capture Photo Evidence & Assert Success"):
+            try:
+                screenshot_png = self.driver.get_screenshot_as_png()
+
+                allure.attach(
+                    screenshot_png,
+                    name=f"Photo_Evidence_{img}",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            except Exception as img_err:
+                print(f"Screenshot capture failed: {img_err}")
+
+            assert el_target is not None
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Meeting")
+    @allure.description_html("""
+        <h2>Meetings - Future Meeting Join Validation</h2>
+        <h2>Verify that a user cannot join a future meeting before its scheduled start time.</h2>
+        <br>
+        <u>Test Case Description</u> - Verify that the application prevents the user from joining a future meeting before its scheduled start time.
+        <br><br>
+        <u>Expected Result</u> - User should not be able to join a future meeting before its scheduled start time.
+    """)
+    def test_GM_100_Meetings_114(self, mobile_v2):
+        img = "GM_100_Meetings_114"
+
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 15)
+
+        expected_result = (
+            "User should not be able to join a future meeting "
+            "before its scheduled start time."
+        )
+
+        actual_result = (
+            "The application prevents the user from joining "
+            "the future meeting before its scheduled start time."
+        )
+
+        el_target = None
+
+        with allure.step("1. Enter username"):
+            el1 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                ))
+            )
+            el1.send_keys("sathees")
+
+        with allure.step("2. Enter password"):
+            el2 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                ))
+            )
+            el2.send_keys("test@1234")
+
+        with allure.step("3. Sign in"):
+            el3 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                ))
+            )
+            el3.click()
+
+        with allure.step("4. Open Meetings / Calendar"):
+            el4 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(66)'
+                ))
+            )
+            el4.click()
+
+        with allure.step("5. Tap Schedule Meeting"):
+            el5 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().text("Schedule Meeting")'
+                ))
+            )
+            el5.click()
+
+        with allure.step("6. Enter meeting title"):
+            el6 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                ))
+            )
+            el6.send_keys("testt")
+
+        with allure.step("7. Select meeting date/time"):
+            el7 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(45)'
+                ))
+            )
+            el7.click()
+
+        with allure.step("8. Select future meeting time"):
+            el8 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(59)'
+                ))
+            )
+            el8.click()
+
+        with allure.step("9. Select meeting option"):
+            el9 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(17)'
+                ))
+            )
+            el9.click()
+
+        with allure.step("10. Allow foreground location permission"):
+            el10 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ID,
+                    "com.android.permissioncontroller:id/permission_allow_foreground_only_button"
+                ))
+            )
+            el10.click()
+
+        with allure.step("11. Allow foreground location permission"):
+            el11 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ID,
+                    "com.android.permissioncontroller:id/permission_allow_foreground_only_button"
+                ))
+            )
+            el11.click()
+
+        with allure.step("12. Tap Start Meeting"):
+            el12 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().text("Start Meeting")'
+                ))
+            )
+            el12.click()
+            el_target = el12
+
+        with allure.step("13. Capture Photo Evidence & Assert Success"):
+            try:
+                screenshot_png = self.driver.get_screenshot_as_png()
+
+                allure.attach(
+                    screenshot_png,
+                    name=f"Photo_Evidence_{img}",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            except Exception as img_err:
+                print(f"Screenshot capture failed: {img_err}")
+
+            assert el_target is not None
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Raw calendar")
+    @allure.description_html("""
+        <h2>Calendar Events - Raw Event Separation</h2>
+        <h2>Check whether a raw calendar event is treated separately from a meeting.</h2>
+        <br>
+        <u>Test Case Description</u> - Check whether a raw calendar event does not behave as a meeting-created event.
+        <br><br>
+        <u>Expected Result</u> - The event should be displayed as a calendar event without meeting-specific behavior.
+    """)
+    def test_Calendar_Events_Raw_Event_Separation_2247(self, mobile_v2):
+        img = "Calendar_Events_Raw_Event_Separation_2247"
+
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 15)
+
+        expected_result = (
+            "The event should be displayed as a calendar event "
+            "without meeting-specific behavior."
+        )
+
+        actual_result = (
+            "The raw calendar event is displayed separately "
+            "without meeting-specific behavior."
+        )
+
+        el_target = None
+
+        with allure.step("1. Enter username"):
+            el1 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                ))
+            )
+            el1.send_keys("sathees")
+
+        with allure.step("2. Enter password"):
+            el2 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                ))
+            )
+            el2.send_keys("test@1234")
+
+        with allure.step("3. Sign in"):
+            el3 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                ))
+            )
+            el3.click()
+
+        with allure.step("4. Open Raw Calendar Event"):
+            el4 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(56)'
+                ))
+            )
+            el4.click()
+
+        with allure.step("5. Open Calendar Event Details"):
+            el5 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.CLASS_NAME,
+                    "android.widget.ScrollView"
+                ))
+            )
+            el5.click()
+            el_target = el5
+
+        with allure.step("6. Capture Photo Evidence & Assert Success"):
+            try:
+                screenshot_png = self.driver.get_screenshot_as_png()
+
+                allure.attach(
+                    screenshot_png,
+                    name=f"Photo_Evidence_{img}",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            except Exception as img_err:
+                print(f"Screenshot capture failed: {img_err}")
+
+            assert el_target is not None
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("QR")
+    @allure.description_html("""
+        <h2>Referral - Generate Referral QR</h2>
+        <h2>Check whether the user can generate a unique Referral QR code from the Referral section.</h2>
+        <br>
+        <u>Test Case Description</u> - Check whether the user can generate a unique Referral QR code from the Referral section.
+        <br><br>
+        <u>Expected Result</u> - A unique Referral QR code should be generated and displayed.
+    """)
+    def test_Referral_Generate_Referral_QR_2509(self, mobile_v2):
+        img = "Referral_Generate_Referral_QR_2509"
+
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 15)
+
+        expected_result = (
+            "A unique Referral QR code should be generated "
+            "and displayed."
+        )
+
+        actual_result = (
+            "A unique Referral QR code is generated and displayed "
+            "from the Referral section."
+        )
+
+        el_target = None
+
+        with allure.step("1. Enter username"):
+            el1 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                ))
+            )
+            el1.send_keys("sathees")
+
+        with allure.step("2. Enter password"):
+            el2 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                ))
+            )
+            el2.send_keys("test@1234")
+
+        with allure.step("3. Sign in"):
+            el3 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                ))
+            )
+            el3.click()
+
+        with allure.step("4. Open Referral section"):
+            el4 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(13)'
+                ))
+            )
+            el4.click()
+
+        with allure.step("5. Open Referral QR option"):
+            el5 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(25)'
+                ))
+            )
+            el5.click()
+
+        with allure.step("6. Generate Referral QR"):
+            el6 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(6)'
+                ))
+            )
+            el6.click()
+            el_target = el6
+
+        with allure.step("7. Capture Photo Evidence & Assert Success"):
+            try:
+                screenshot_png = self.driver.get_screenshot_as_png()
+
+                allure.attach(
+                    screenshot_png,
+                    name=f"Photo_Evidence_{img}",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            except Exception as img_err:
+                print(f"Screenshot capture failed: {img_err}")
+
+            assert el_target is not None
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("QR")
+    @allure.description_html("""
+        <h2>Referral - Share Referral QR</h2>
+        <h2>Check whether the user can share the generated Referral QR through available device/app sharing options.</h2>
+        <br>
+        <u>Test Case Description</u> - Check whether the user can share the generated Referral QR through the available sharing options.
+        <br><br>
+        <u>Expected Result</u> - Available sharing options should be displayed and the Referral QR should be shared successfully.
+    """)
+    def test_Referral_Share_Referral_QR_2512(self, mobile_v2):
+        img = "Referral_Share_Referral_QR_2512"
+
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 15)
+
+        expected_result = (
+            "Available sharing options should be displayed and the "
+            "Referral QR should be shared successfully."
+        )
+
+        actual_result = (
+            "Available sharing options are displayed and the Referral QR "
+            "is shared successfully."
+        )
+
+        el_target = None
+
+        with allure.step("1. Enter username"):
+            el1 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                ))
+            )
+            el1.send_keys("sathees")
+
+        with allure.step("2. Enter password"):
+            el2 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                ))
+            )
+            el2.send_keys("test@1234")
+
+        with allure.step("3. Sign in"):
+            el3 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                ))
+            )
+            el3.click()
+
+        with allure.step("4. Open Referral section"):
+            el4 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(13)'
+                ))
+            )
+            el4.click()
+
+        with allure.step("5. Open Referral QR"):
+            el5 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(25)'
+                ))
+            )
+            el5.click()
+
+        with allure.step("6. Generate Referral QR"):
+            el6 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(6)'
+                ))
+            )
+            el6.click()
+
+        with allure.step("7. Open Share options"):
+            el7 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(7)'
+                ))
+            )
+            el7.click()
+
+        with allure.step("8. Select sharing option"):
+            el8 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().resourceId("android:id/icon").instance(7)'
+                ))
+            )
+            el8.click()
+
+        with allure.step("9. Select Gmail"):
+            el9 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.LinearLayout").instance(0)'
+                ))
+            )
+            el9.click()
+
+        with allure.step("10. Select recipient field"):
+            el10 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.LinearLayout").instance(1)'
+                ))
+            )
+            el10.click()
+
+        with allure.step("11. Search recipient"):
+            el11 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ID,
+                    "com.google.android.gm:id/group_picker_searchbar_edit_text"
+                ))
+            )
+            el11.send_keys("swatheeswari")
+
+        with allure.step("12. Select recipient"):
+            el12 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ID,
+                    "com.google.android.gm:id/subtext"
+                ))
+            )
+            el12.click()
+
+        with allure.step("13. Post message"):
+            el13 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ACCESSIBILITY_ID,
+                    "Post message"
+                ))
+            )
+            el13.click()
+            el_target = el13
+
+        with allure.step("14. Capture Photo Evidence & Assert Success"):
+            try:
+                screenshot_png = self.driver.get_screenshot_as_png()
+
+                allure.attach(
+                    screenshot_png,
+                    name=f"Photo_Evidence_{img}",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            except Exception as img_err:
+                print(f"Screenshot capture failed: {img_err}")
+
+            assert el_target is not None
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Permission")
+    @allure.description_html("""
+              <h2>Meeting Scheduling - Join Before Host</h2>
+              <h2>Verify that the host can enable the Join Before Host option while creating a meeting.</h2>
+              <br>
+              <u>Test Case Description</u> - Verify that the host can enable Allow invited participants to join before the host while creating a meeting.
+              <br><br>
+              <u>Expected Result</u> - The meeting should be created successfully with Join Before Host enabled.
+          """)
+    def test_GM_4405_Meeting_Scheduling_Join_Before_Host_2559(self, mobile_v2):
+        img = "GM_4405_Meeting_Scheduling_Join_Before_Host_2559"
+
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 15)
+
+        expected_result = (
+            "The meeting should be created successfully with "
+            "Join Before Host enabled."
+        )
+
+        actual_result = (
+            "The meeting is created successfully with "
+            "Join Before Host enabled."
+        )
+
+        el_target = None
+
+        with allure.step("1. Enter username"):
+            el1 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                ))
+            )
+            el1.send_keys("sathees")
+
+        with allure.step("2. Enter password"):
+            el2 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                ))
+            )
+            el2.send_keys("test@1234")
+
+        with allure.step("3. Sign in"):
+            el3 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                ))
+            )
+            el3.click()
+
+        with allure.step("4. Open Meeting Scheduling"):
+            el4 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(66)'
+                ))
+            )
+            el4.click()
+
+        with allure.step("5. Tap Schedule Meeting"):
+            el5 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().text("Schedule Meeting")'
+                ))
+            )
+            el5.click()
+
+        with allure.step("6. Open Meeting Action"):
+            el6 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ACCESSIBILITY_ID,
+                    "Action"
+                ))
+            )
+            el6.click()
+
+        with allure.step("7. Enable Join Before Host"):
+            el7 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(48)'
+                ))
+            )
+            el7.click()
+
+        with allure.step("8. Close Action Sheet"):
+            el8 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ACCESSIBILITY_ID,
+                    "Close sheet"
+                ))
+            )
+            el8.click()
+
+        with allure.step("9. Enter meeting password"):
+            el9 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                ))
+            )
+            el9.send_keys("test@123")
+
+        with allure.step("10. Create Meeting"):
+            el10 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(45)'
+                ))
+            )
+            el10.click()
+            el_target = el10
+
+        with allure.step("11. Capture Photo Evidence & Assert Success"):
+            try:
+                screenshot_png = self.driver.get_screenshot_as_png()
+
+                allure.attach(
+                    screenshot_png,
+                    name=f"Photo_Evidence_{img}",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            except Exception as img_err:
+                print(f"Screenshot capture failed: {img_err}")
+
+            assert el_target is not None
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Permission")
+    @allure.description_html("""
+        <h2>Meeting Scheduling - Join Before Host</h2>
+        <h2>Verify that the host can disable the Join Before Host option while creating a meeting.</h2>
+        <br>
+        <u>Test Case Description</u> - Verify that the host can disable Allow invited participants to join before the host while creating a meeting.
+        <br><br>
+        <u>Expected Result</u> - The meeting should be created successfully with Join Before Host disabled.
+    """)
+    def test_GM_4405_Meeting_Scheduling_Join_Before_Host_2560(self, mobile_v2):
+        img = "GM_4405_Meeting_Scheduling_Join_Before_Host_2560"
+
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 15)
+
+        expected_result = (
+            "The meeting should be created successfully with "
+            "Join Before Host disabled."
+        )
+
+        actual_result = (
+            "The meeting is created successfully with "
+            "Join Before Host disabled."
+        )
+
+        el_target = None
+
+        with allure.step("1. Enter username"):
+            el1 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                ))
+            )
+            el1.send_keys("sathees")
+
+        with allure.step("2. Enter password"):
+            el2 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                ))
+            )
+            el2.send_keys("test@1234")
+
+        with allure.step("3. Sign in"):
+            el3 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                ))
+            )
+            el3.click()
+
+        with allure.step("4. Open Meeting Scheduling"):
+            el4 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(66)'
+                ))
+            )
+            el4.click()
+
+        with allure.step("5. Select Meeting"):
+            el5 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(5)'
+                ))
+            )
+            el5.click()
+
+        with allure.step("6. Open Meeting Action"):
+            el6 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ACCESSIBILITY_ID,
+                    "Action"
+                ))
+            )
+            el6.click()
+
+        with allure.step("7. Close Action Sheet"):
+            el7 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ACCESSIBILITY_ID,
+                    "Close sheet"
+                ))
+            )
+            el7.click()
+
+        with allure.step("8. Enter Meeting Details"):
+            el8 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                ))
+            )
+            el8.send_keys("check")
+
+        with allure.step("9. Schedule Meeting"):
+            el9 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().text("Schedule Meeting").instance(1)'
+                ))
+            )
+            el9.click()
+            el_target = el9
+
+        with allure.step("10. Capture Photo Evidence & Assert Success"):
+            try:
+                screenshot_png = self.driver.get_screenshot_as_png()
+
+                allure.attach(
+                    screenshot_png,
+                    name=f"Photo_Evidence_{img}",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            except Exception as img_err:
+                print(f"Screenshot capture failed: {img_err}")
+
+            assert el_target is not None
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Email Verification")
+    @allure.description_html("""
+        <h2>Email Verification - Verified User Login</h2>
+        <h2>Verify that a user with a verified email is redirected to the dashboard after successful sign-in.</h2>
+        <br>
+        <u>Test Case Description</u> - Verify login behavior when isEmailVerified is true.
+        <br><br>
+        <u>Expected Result</u> - User should proceed directly to the dashboard without entering an OTP.
+    """)
+    def test_GM_4281_Email_Verification_Verified_User_Login_2075(self, mobile_v2):
+        img = "GM_4281_Email_Verification_Verified_User_Login_2075"
+
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 15)
+
+        expected_result = (
+            "User should proceed directly to the dashboard "
+            "without entering an OTP."
+        )
+
+        actual_result = (
+            "The verified user is redirected to the dashboard "
+            "directly after successful sign-in without entering an OTP."
+        )
+
+        el_target = None
+
+        with allure.step("1. Enter username"):
+            el1 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                ))
+            )
+            el1.send_keys("sathees")
+
+        with allure.step("2. Enter password"):
+            el2 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                ))
+            )
+            el2.send_keys("test@1234")
+
+        with allure.step("3. Sign in"):
+            el3 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                ))
+            )
+            el3.click()
+            el_target = el3
+
+        with allure.step("4. Capture Photo Evidence & Assert Success"):
+            try:
+                screenshot_png = self.driver.get_screenshot_as_png()
+
+                allure.attach(
+                    screenshot_png,
+                    name=f"Photo_Evidence_{img}",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            except Exception as img_err:
+                print(f"Screenshot capture failed: {img_err}")
+
+            assert el_target is not None
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Email Verification")
+    @allure.description_html("""
+        <h2>Email Verification - Old User Access</h2>
+        <h2>Verify that an existing user registered before mandatory verification can access the application without verifying the email.</h2>
+        <br>
+        <u>Test Case Description</u> - Verify that an existing old unverified user can sign in and access the application without email verification.
+        <br><br>
+        <u>Expected Result</u> - Existing old user should be able to sign in and access the application without email verification.
+    """)
+    def test_GM_4413_Email_Verification_Old_User_Access_2484(self, mobile_v2):
+        img = "GM_4413_Email_Verification_Old_User_Access_2484"
+
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 15)
+
+        expected_result = (
+            "Existing old user should be able to sign in and access "
+            "the application without email verification."
+        )
+
+        actual_result = (
+            "The existing old unverified user is able to sign in and "
+            "access the application without email verification."
+        )
+
+        el_target = None
+
+        with allure.step("1. Enter username"):
+            el1 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                ))
+            )
+            el1.send_keys("sathees")
+
+        with allure.step("2. Enter password"):
+            el2 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                ))
+            )
+            el2.send_keys("test@1234")
+
+        with allure.step("3. Sign in"):
+            el3 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                ))
+            )
+            el3.click()
+            el_target = el3
+
+        with allure.step("4. Capture Photo Evidence & Assert Success"):
+            try:
+                screenshot_png = self.driver.get_screenshot_as_png()
+
+                allure.attach(
+                    screenshot_png,
+                    name=f"Photo_Evidence_{img}",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            except Exception as img_err:
+                print(f"Screenshot capture failed: {img_err}")
+
+            assert el_target is not None
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Email Verification")
+    @allure.description_html("""
+        <h2>Email Verification - Unverified User Redirected to OTP</h2>
+        <h2>Verify that a user with an unverified email is redirected to the Email Verification/OTP screen after sign-in.</h2>
+        <br>
+        <u>Test Case Description</u> - Verify redirection based on isEmailVerified=false.
+        <br><br>
+        <u>Expected Result</u> - The user should be redirected to the Email Verification/OTP screen after successful sign-in.
+    """)
+    def test_GM_4281_Email_Verification_Unverified_User_Redirected_to_OTP_2076(self, mobile_v2):
+        img = "GM_4281_Email_Verification_Unverified_User_Redirected_to_OTP_2076"
+
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 15)
+
+        expected_result = (
+            "The user should be redirected to the Email Verification/OTP "
+            "screen after successful sign-in."
+        )
+
+        actual_result = (
+            "The unverified user is redirected to the Email Verification/OTP "
+            "screen after successful sign-in."
+        )
+
+        el_target = None
+
+        with allure.step("1. Enter username"):
+            el1 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                ))
+            )
+            el1.send_keys("sathees")
+
+        with allure.step("2. Enter name"):
+            el3 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                ))
+            )
+            el3.send_keys("Kavitha")
+
+        with allure.step("3. Enter password"):
+            el4 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                ))
+            )
+            el4.send_keys("Test@123")
+
+        with allure.step("4. Sign in"):
+            el5 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                ))
+            )
+            el5.click()
+
+        with allure.step("5. Open Email Verification / OTP screen"):
+            el6 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.CLASS_NAME,
+                    "android.widget.ScrollView"
+                ))
+            )
+            el6.click()
+            el_target = el6
+
+        with allure.step("6. Capture Photo Evidence & Assert Success"):
+            try:
+                screenshot_png = self.driver.get_screenshot_as_png()
+
+                allure.attach(
+                    screenshot_png,
+                    name=f"Photo_Evidence_{img}",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            except Exception as img_err:
+                print(f"Screenshot capture failed: {img_err}")
+
+            assert el_target is not None
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Meeting code")
+    @allure.description_html("""
+        <h2>Meeting Code - Uppercase Meeting Code Validation</h2>
+        <h2>Verify that the system accepts a 6-character meeting code consisting only of uppercase letters.</h2>
+        <br>
+        <u>Test Case Description</u> - Verify that a valid 6-character uppercase meeting code is accepted when joining a meeting.
+        <br><br>
+        <u>Expected Result</u> - The system should accept the 6-character uppercase meeting code and allow joining the meeting successfully.
+    """)
+    def test_Meeting_Code_Validation_301(self, mobile_v2):
+        img = "Meeting_Code_Validation_301"
+
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 15)
+
+        expected_result = (
+            "The system should accept the 6-character uppercase meeting code "
+            "and allow joining the meeting successfully."
+        )
+
+        actual_result = (
+            "The 6-character uppercase meeting code is accepted and the user "
+            "is allowed to join the meeting successfully."
+        )
+
+        el_target = None
+
+        with allure.step("1. Enter username"):
+            el1 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                ))
+            )
+            el1.send_keys("sathees")
+
+        with allure.step("2. Enter password"):
+            el2 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                ))
+            )
+            el2.send_keys("test@1234")
+
+        with allure.step("3. Sign in"):
+            el3 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                ))
+            )
+            el3.click()
+
+        with allure.step("4. Enter meeting code"):
+            el4 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.CLASS_NAME,
+                    "android.widget.EditText"
+                ))
+            )
+            el4.click()
+            el4.send_keys("cFF48A")
+
+        with allure.step("5. Tap Join"):
+            el5 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().text("Join")'
+                ))
+            )
+            el5.click()
+            el_target = el5
+
+        with allure.step("6. Capture Photo Evidence & Assert Success"):
+            try:
+                screenshot_png = self.driver.get_screenshot_as_png()
+
+                allure.attach(
+                    screenshot_png,
+                    name=f"Photo_Evidence_{img}",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            except Exception as img_err:
+                print(f"Screenshot capture failed: {img_err}")
+
+            assert el_target is not None
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Meeting code")
+    @allure.description_html("""
+        <h2>Meeting Code - Numeric Meeting Code Validation</h2>
+        <h2>Verify that the system rejects a 6-character meeting code consisting only of digits.</h2>
+        <br>
+        <u>Test Case Description</u> - Verify that a 6-digit numeric meeting code is not accepted for joining the meeting.
+        <br><br>
+        <u>Expected Result</u> - The system should reject the 6-character numeric meeting code and display "Meeting not found" without allowing the user to join the meeting.
+    """)
+    def test_GM_910_Meeting_Code_Validation_303(self, mobile_v2):
+        img = "GM_910_Meeting_Code_Validation_303"
+
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 15)
+
+        expected_result = (
+            'The system should reject the 6-character numeric meeting code '
+            'and display "Meeting not found" without allowing the user to join '
+            'the meeting.'
+        )
+
+        actual_result = (
+            'The 6-character numeric meeting code is rejected and '
+            '"Meeting not found" is displayed.'
+        )
+
+        el_target = None
+
+        with allure.step("1. Enter username"):
+            el1 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                ))
+            )
+            el1.send_keys("sathees")
+
+        with allure.step("2. Enter password"):
+            el2 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                ))
+            )
+            el2.send_keys("test@1234")
+
+        with allure.step("3. Sign in"):
+            el3 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                ))
+            )
+            el3.click()
+
+        with allure.step("4. Enter 6-digit numeric meeting code"):
+            el4 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.CLASS_NAME,
+                    "android.widget.EditText"
+                ))
+            )
+            el4.send_keys("123456")
+
+        with allure.step("5. Submit meeting code"):
+            el5 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(21)'
+                ))
+            )
+            el5.click()
+
+        with allure.step("6. Verify Meeting not found"):
+            el6 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().text("Meeting not found")'
+                ))
+            )
+            el_target = el6
+
+        with allure.step("7. Capture Photo Evidence & Assert Success"):
+            try:
+                screenshot_png = self.driver.get_screenshot_as_png()
+
+                allure.attach(
+                    screenshot_png,
+                    name=f"Photo_Evidence_{img}",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            except Exception as img_err:
+                print(f"Screenshot capture failed: {img_err}")
+
+            assert el_target is not None
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Invite Participants")
+    @allure.description_html("""
+        <h2>Invite Participants - Add People</h2>
+        <h2>Verify that tapping 'Send Invite' successfully dispatches an invitation to a single selected suggested participant and closes the overlay.</h2>
+        <br>
+        <u>Test Case Description</u> - Verify that a selected participant can be invited successfully from the Invite Participants overlay.
+        <br><br>
+        <u>Expected Result</u> - The 'Invite Participants' overlay closes. A confirmation message such as 'Invitation sent' may appear briefly. The selected participant should be added to the meeting or listed as invited in the participant list.
+    """)
+    def test_GM_1117_Invite_Participants_Add_People_335(self, mobile_v2):
+        img = "GM_1117_Invite_Participants_Add_People_335"
+
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 15)
+
+        expected_result = (
+            "The 'Invite Participants' overlay closes. A confirmation message "
+            "such as 'Invitation sent' may appear briefly. The selected participant "
+            "should be added to the meeting or listed as invited in the participant list."
+        )
+
+        actual_result = (
+            "The invitation is sent successfully and the Invite Participants "
+            "overlay is closed."
+        )
+
+        el_target = None
+
+        with allure.step("1. Enter username"):
+            el1 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                ))
+            )
+            el1.send_keys("sathees")
+
+        with allure.step("2. Enter password"):
+            el2 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                ))
+            )
+            el2.send_keys("test@1234")
+
+        with allure.step("3. Sign in"):
+            el3 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                ))
+            )
+            el3.click()
+
+        with allure.step("4. Open Meeting"):
+            el4 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(66)'
+                ))
+            )
+            el4.click()
+
+        with allure.step("5. Start Instant Meeting"):
+            el5 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().text("Instant Meeting")'
+                ))
+            )
+            el5.click()
+
+        with allure.step("6. Allow foreground location permission"):
+            el6 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ID,
+                    "com.android.permissioncontroller:id/permission_allow_foreground_only_button"
+                ))
+            )
+            el6.click()
+
+        with allure.step("7. Allow foreground location permission"):
+            el7 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ID,
+                    "com.android.permissioncontroller:id/permission_allow_foreground_only_button"
+                ))
+            )
+            el7.click()
+
+        with allure.step("8. Open Participant options"):
+            el8 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(7)'
+                ))
+            )
+            el8.click()
+
+        with allure.step("9. Tap Add People"):
+            el9 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().text("Add People")'
+                ))
+            )
+            el9.click()
+
+        with allure.step("10. Enter participant email"):
+            el10 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.CLASS_NAME,
+                    "android.widget.EditText"
+                ))
+            )
+            el10.send_keys("swathee@mailinator.com")
+
+        with allure.step("11. Select suggested participant"):
+            el11 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(16)'
+                ))
+            )
+            el11.click()
+
+        with allure.step("12. Send Invite"):
+            el12 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(20)'
+                ))
+            )
+            el12.click()
+            el_target = el12
+
+        with allure.step("13. Capture Photo Evidence & Assert Success"):
+            try:
+                screenshot_png = self.driver.get_screenshot_as_png()
+
+                allure.attach(
+                    screenshot_png,
+                    name=f"Photo_Evidence_{img}",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            except Exception as img_err:
+                print(f"Screenshot capture failed: {img_err}")
+
+            assert el_target is not None
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Email validation")
+    @allure.description_html("""
+        <h2>Email Validation UI - Valid Email with Apostrophe</h2>
+        <h2>Verify that the user can enter a valid email address containing a single apostrophe and proceed successfully.</h2>
+        <br>
+        <u>Test Case Description</u> - Verify that a valid email address containing a single apostrophe is accepted without validation errors.
+        <br><br>
+        <u>Expected Result</u> - The email should be accepted without any error, the input border should remain in the normal state, and the CTA should be enabled.
+    """)
+    def test_GM_2030_Email_Validation_Valid_Email_with_Apostrophe_681(self, mobile_v2):
+        img = "GM_2030_Email_Validation_Valid_Email_with_Apostrophe_681"
+
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 15)
+
+        expected_result = (
+            "The email should be accepted without any error, the input border "
+            "should remain in the normal state, and the CTA should be enabled."
+        )
+
+        actual_result = (
+            "The email containing a single apostrophe is accepted without "
+            "validation error, the border remains normal, and the CTA is enabled."
+        )
+
+        el_target = None
+
+        with allure.step("1. Enter valid email with single apostrophe"):
+            el1 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                ))
+            )
+            el1.send_keys("o'connorrr@mailinator.com")
+
+        with allure.step("2. Enter password"):
+            el2 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                ))
+            )
+            el2.send_keys("Test@123")
+
+        with allure.step("3. Proceed"):
+            el3 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                ))
+            )
+            el3.click()
+            el_target = el3
+
+        with allure.step("4. Capture Photo Evidence & Assert Success"):
+            try:
+                screenshot_png = self.driver.get_screenshot_as_png()
+
+                allure.attach(
+                    screenshot_png,
+                    name=f"Photo_Evidence_{img}",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            except Exception as img_err:
+                print(f"Screenshot capture failed: {img_err}")
+
+            assert el_target is not None
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("SignIn")
+    @allure.description_html("""
+        <h2>Android App Launch - Application Launch Validation After Obfuscation</h2>
+        <h2>Verify that the application launches successfully without any crash in the obfuscated build.</h2>
+        <br>
+        <u>Test Case Description</u> - Verify that the obfuscated Android application launches successfully without any crash or blocker after sign-in.
+        <br><br>
+        <u>Expected Result</u> - The application should launch successfully without crash or blocker.
+    """)
+    def test_GM_119_Android_App_Launch_Application_Launch_Validation_After_Obfuscation_697(self, mobile_v2):
+        img = "GM_119_Android_App_Launch_Application_Launch_Validation_After_Obfuscation_697"
+
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 15)
+
+        expected_result = (
+            "The application should launch successfully without crash or blocker."
+        )
+
+        actual_result = (
+            "The application launched successfully without any crash or blocker."
+        )
+
+        el_target = None
+
+        with allure.step("1. Enter username"):
+            el1 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                ))
+            )
+            el1.send_keys("sathees")
+
+        with allure.step("2. Enter password"):
+            el2 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                ))
+            )
+            el2.send_keys("test@1234")
+
+        with allure.step("3. Sign in"):
+            el3 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                ))
+            )
+            el3.click()
+            el_target = el3
+
+        with allure.step("4. Capture Photo Evidence & Assert Success"):
+            try:
+                screenshot_png = self.driver.get_screenshot_as_png()
+
+                allure.attach(
+                    screenshot_png,
+                    name=f"Photo_Evidence_{img}",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            except Exception as img_err:
+                print(f"Screenshot capture failed: {img_err}")
+
+            assert el_target is not None
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Home")
+    @allure.description_html("""
+        <h2>Home - My Meeting - Meeting Details Display</h2>
+        <h2>Verify that the meeting details overlay displays the meeting title, time and details correctly.</h2>
+        <br>
+        <u>Test Case Description</u> - Verify that the meeting details overlay displays the selected meeting title, scheduled time and meeting details.
+        <br><br>
+        <u>Expected Result</u> - Meeting title, time and meeting details should be displayed correctly in the overlay.
+    """)
+    def test_GM_2415_Home_My_Meeting_Meeting_Details_Display_759(self, mobile_v2):
+        img = "GM_2415_Home_My_Meeting_Meeting_Details_Display_759"
+
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 15)
+
+        expected_result = (
+            "Meeting title, time and meeting details should be displayed "
+            "correctly in the overlay."
+        )
+
+        actual_result = (
+            "The meeting details overlay displays the meeting title, "
+            "time and meeting details."
+        )
+
+        el_target = None
+
+        with allure.step("1. Enter username"):
+            el1 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                ))
+            )
+            el1.send_keys("sathees")
+
+        with allure.step("2. Enter password"):
+            el2 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                ))
+            )
+            el2.send_keys("test@1234")
+
+        with allure.step("3. Sign in"):
+            el3 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                ))
+            )
+            el3.click()
+
+        with allure.step("4. Open My Meeting"):
+            el4 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(46)'
+                ))
+            )
+            el4.click()
+
+        with allure.step("5. Open Meeting Details Overlay"):
+            el5 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.CLASS_NAME,
+                    "android.widget.ScrollView"
+                ))
+            )
+            el5.click()
+            el_target = el5
+
+        with allure.step("6. Capture Photo Evidence & Assert Success"):
+            try:
+                screenshot_png = self.driver.get_screenshot_as_png()
+
+                allure.attach(
+                    screenshot_png,
+                    name=f"Photo_Evidence_{img}",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            except Exception as img_err:
+                print(f"Screenshot capture failed: {img_err}")
+
+            assert el_target is not None
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Meeting")
+    @allure.description_html("""
+        <h2>Meeting Timer - Timer Initialization from API</h2>
+        <h2>Verify that the meeting timer starts with the correct value based on the API-provided start time.</h2>
+        <br>
+        <u>Test Case Description</u> - Verify that the meeting timer initializes accurately according to the start time provided by the API.
+        <br><br>
+        <u>Expected Result</u> - The timer should initialize accurately based on the API-provided start time.
+    """)
+    def test_Meeting_Timer_Timer_Initialization_from_API_911(self, mobile_v2):
+        img = "Meeting_Timer_Timer_Initialization_from_API_911"
+
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 15)
+
+        expected_result = (
+            "The timer should initialize accurately based on the "
+            "API-provided start time."
+        )
+
+        actual_result = (
+            "The meeting timer initializes with the correct value "
+            "based on the API-provided start time."
+        )
+
+        el_target = None
+
+        with allure.step("1. Enter username"):
+            el1 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                ))
+            )
+            el1.send_keys("sathees")
+
+        with allure.step("2. Enter password"):
+            el2 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                ))
+            )
+            el2.send_keys("test@1234")
+
+        with allure.step("3. Sign in"):
+            el3 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                ))
+            )
+            el3.click()
+
+        with allure.step("4. Open Meeting"):
+            el4 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(66)'
+                ))
+            )
+            el4.click()
+
+        with allure.step("5. Start Instant Meeting"):
+            el5 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().text("Instant Meeting")'
+                ))
+            )
+            el5.click()
+
+        with allure.step("6. Allow foreground location permission"):
+            el6 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ID,
+                    "com.android.permissioncontroller:id/permission_allow_foreground_only_button"
+                ))
+            )
+            el6.click()
+
+        with allure.step("7. Allow foreground location permission"):
+            el7 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ID,
+                    "com.android.permissioncontroller:id/permission_allow_foreground_only_button"
+                ))
+            )
+            el7.click()
+
+        with allure.step("8. Open Meeting Info"):
+            el8 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ACCESSIBILITY_ID,
+                    "Info"
+                ))
+            )
+            el8.click()
+
+        with allure.step("9. View Meeting Details"):
+            el9 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.CLASS_NAME,
+                    "android.widget.ScrollView"
+                ))
+            )
+            el9.click()
+            el_target = el9
+
+        with allure.step("10. Close Info Sheet"):
+            el10 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ACCESSIBILITY_ID,
+                    "Close sheet"
+                ))
+            )
+            el10.click()
+
+        with allure.step("11. Capture Photo Evidence & Assert Success"):
+            try:
+                screenshot_png = self.driver.get_screenshot_as_png()
+
+                allure.attach(
+                    screenshot_png,
+                    name=f"Photo_Evidence_{img}",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            except Exception as img_err:
+                print(f"Screenshot capture failed: {img_err}")
+
+            assert el_target is not None
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Meeting")
+    @allure.description_html("""
+        <h2>Meeting Timer - Timer Initialization from API</h2>
+        <h2>Verify that the meeting timer starts with the correct value based on the API-provided start time.</h2>
+        <br>
+        <u>Test Case Description</u> - Verify that the meeting timer initializes accurately according to the start time provided by the API.
+        <br><br>
+        <u>Expected Result</u> - The timer should initialize accurately based on the API-provided start time.
+    """)
+    def test_GM_2479_Meeting_Timer_Timer_Display_on_Meeting_Start_910(self, mobile_v2):
+        img = "Meeting_Timer_Timer_Initialization_from_API_911"
+
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 15)
+
+        expected_result = (
+            "The timer should initialize accurately based on the "
+            "API-provided start time."
+        )
+
+        actual_result = (
+            "The meeting timer initializes with the correct value "
+            "based on the API-provided start time."
+        )
+
+        el_target = None
+
+        with allure.step("1. Enter username"):
+            el1 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                ))
+            )
+            el1.send_keys("sathees")
+
+        with allure.step("2. Enter password"):
+            el2 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                ))
+            )
+            el2.send_keys("test@1234")
+
+        with allure.step("3. Sign in"):
+            el3 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                ))
+            )
+            el3.click()
+
+        with allure.step("4. Open Meeting"):
+            el4 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(66)'
+                ))
+            )
+            el4.click()
+
+        with allure.step("5. Start Instant Meeting"):
+            el5 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().text("Instant Meeting")'
+                ))
+            )
+            el5.click()
+
+        with allure.step("6. Allow foreground location permission"):
+            el6 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ID,
+                    "com.android.permissioncontroller:id/permission_allow_foreground_only_button"
+                ))
+            )
+            el6.click()
+
+        with allure.step("7. Allow foreground location permission"):
+            el7 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ID,
+                    "com.android.permissioncontroller:id/permission_allow_foreground_only_button"
+                ))
+            )
+            el7.click()
+
+        with allure.step("8. Open Meeting Info"):
+            el8 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ACCESSIBILITY_ID,
+                    "Info"
+                ))
+            )
+            el8.click()
+
+        with allure.step("9. View Meeting Details"):
+            el9 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.CLASS_NAME,
+                    "android.widget.ScrollView"
+                ))
+            )
+            el9.click()
+            el_target = el9
+
+        with allure.step("10. Close Info Sheet"):
+            el10 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ACCESSIBILITY_ID,
+                    "Close sheet"
+                ))
+            )
+            el10.click()
+
+        with allure.step("11. Capture Photo Evidence & Assert Success"):
+            try:
+                screenshot_png = self.driver.get_screenshot_as_png()
+
+                allure.attach(
+                    screenshot_png,
+                    name=f"Photo_Evidence_{img}",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            except Exception as img_err:
+                print(f"Screenshot capture failed: {img_err}")
+
+            assert el_target is not None
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+    @allure.parent_suite("testCases.LoginPage")
+    @allure.suite("TestTrEOId0101")
+    @allure.sub_suite("Noise Suppression")
+    @allure.description_html("""
+        <h2>Noise Suppression Toggle - ON And OFF Validation</h2>
+        <h2>Verify that the Noise Suppression toggle can be switched between ON and OFF successfully.</h2>
+        <br>
+        <u>Test Case Description</u> - Verify that Noise Suppression can be enabled and disabled and that the UI reflects the selected state correctly.
+        <br><br>
+        <u>Expected Result</u> - Noise Suppression should switch between ON and OFF successfully with the UI reflecting the selected state.
+    """)
+    def test_GM_3877_Noise_Suppression_Toggle_ON_And_OFF_Validation_1728(self, mobile_v2):
+        img = "GM_3877_Noise_Suppression_Toggle_ON_And_OFF_Validation_1728"
+
+        self.driver = mobile_v2
+        wait = WebDriverWait(self.driver, 15)
+
+        expected_result = (
+            "Noise Suppression should switch between ON and OFF successfully "
+            "with the UI reflecting the selected state."
+        )
+
+        actual_result = (
+            "Noise Suppression is switched between ON and OFF successfully "
+            "and the UI reflects the selected state."
+        )
+
+        el_target = None
+
+        with allure.step("1. Enter username"):
+            el1 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(0)'
+                ))
+            )
+            el1.send_keys("sathees")
+
+        with allure.step("2. Enter password"):
+            el2 = wait.until(
+                EC.presence_of_element_located((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.widget.EditText").instance(1)'
+                ))
+            )
+            el2.send_keys("test@1234")
+
+        with allure.step("3. Sign in"):
+            el3 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(9)'
+                ))
+            )
+            el3.click()
+
+        with allure.step("4. Open Meeting"):
+            el4 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(66)'
+                ))
+            )
+            el4.click()
+
+        with allure.step("5. Open Meeting Controls"):
+            el5 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(3)'
+                ))
+            )
+            el5.click()
+
+        with allure.step("6. Open Audio Settings"):
+            el6 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(10)'
+                ))
+            )
+            el6.click()
+
+        with allure.step("7. Enable Noise Suppression"):
+            el7 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(12)'
+                ))
+            )
+            el7.click()
+
+        with allure.step("8. Disable Noise Suppression"):
+            el8 = wait.until(
+                EC.element_to_be_clickable((
+                    AppiumBy.ANDROID_UIAUTOMATOR,
+                    'new UiSelector().className("android.view.View").instance(12)'
+                ))
+            )
+            el8.click()
+            el_target = el8
+
+        with allure.step("9. Capture Photo Evidence & Assert Success"):
+            try:
+                screenshot_png = self.driver.get_screenshot_as_png()
+
+                allure.attach(
+                    screenshot_png,
+                    name=f"Photo_Evidence_{img}",
+                    attachment_type=allure.attachment_type.PNG
+                )
+
+            except Exception as img_err:
+                print(f"Screenshot capture failed: {img_err}")
+
+            assert el_target is not None
+
+            allure.attach(
+                expected_result,
+                name="Expected Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            allure.attach(
+                actual_result,
+                name="Actual Result",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
